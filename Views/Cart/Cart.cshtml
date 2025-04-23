@@ -1,0 +1,274 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@model GioHang
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Cart">Giỏ hàng</a></li>
+            
+        </ul>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Cart Start -->
+<div class="cart-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-page-inner">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng</th>
+                                    <th>Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle" id="cartBody">
+                                <tr>
+                                    <td>
+                                        <div class="img">
+                                            <a href="#"><img src="img/product-1.jpg" alt="Hình ảnh"></a>
+                                            <p>Tên sản phẩm</p>
+                                        </div>
+                                    </td>
+                                    <td>$99</td>
+                                    <td>
+                                        <div class="qty">
+                                            <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                            <input type="text" value="1">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                    </td>
+                                    <td>$99</td>
+                                    <td><button><i class="fa fa-trash"></i></button></td>
+                                </tr>
+                                <!-- Các sản phẩm khác tương tự -->
+                                <!-- Bạn có thể giữ nguyên các dòng lặp và chỉ cần đổi văn bản hiển thị -->
+                                <!-- Ở đây sẽ lặp lại tương tự các phần trên với hình ảnh và tên sản phẩm khác -->
+                                <tr>
+                                    <td>
+                                        <div class="img">
+                                            <a href="#"><img src="img/product-2.jpg" alt="Hình ảnh"></a>
+                                            <p>Tên sản phẩm</p>
+                                        </div>
+                                    </td>
+                                    <td>$99</td>
+                                    <td>
+                                        <div class="qty">
+                                            <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                            <input type="text" value="1">
+                                            <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                    </td>
+                                    <td>$99</td>
+                                    <td><button><i class="fa fa-trash"></i></button></td>
+                                </tr>
+                                <!-- ... thêm sản phẩm khác -->
+                               @*  @foreach(var item in Model.items)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="img">
+                                                <a href="#"><img src="~/Image/@item.HinhAnhSanPham" alt="Hình ảnh"></a>
+                                                <p>@item.TenSanPham</p>
+                                            </div>
+                                        </td>
+                                        <td>@item.DonGiaBan</td>
+                                        <td>
+                                            <div class="qty">
+                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                <input type="text" value="@item.SoLuong">
+                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td><button><i class="fa fa-trash"></i></button></td>
+                                    </tr>
+                                } *@
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart-page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="coupon">
+                                <input type="text" placeholder="Mã giảm giá">
+                                <button>Áp dụng mã</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="cart-summary">
+                                <div class="cart-content">
+                                    @* <h1>Tóm tắt giỏ hàng</h1> *@
+                                    @* <p>Tạm tính<span>$99</span></p> *@
+                                    @* <p>Phí vận chuyển<span>$1</span></p> *@
+                                    <h2 id="Total">Tổng cộng<span>0đ</span></h2>
+                                </div>
+                                <div class="cart-btn">
+                                    <button>Cập nhật</button>
+                                    <button>Thanh toán</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart End -->
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function(){
+            getCart();
+
+           
+      });
+
+           $('body').on('click', '.btn-plus', function () {
+                alert('tang');
+                const $input = $(this).siblings('input');
+                let val = parseInt($input.val()) || 0;
+                $input.val(val + 1);
+            });
+
+            $('body').on('click', '.btn-minus', function () {
+                const $input = $(this).siblings('input');
+                let val = parseInt($input.val()) || 0;
+                if (val > 1) $input.val(val - 1);
+            });
+
+           
+      
+
+           function formatNumber(num) {
+                if (!num) return "";
+                return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
+            }
+
+        function getCart(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/cart',
+                method: 'GET',
+                dataType: 'json',
+                 xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+                 },
+                error: function (res) {
+                         alert("lỗi");
+                 },
+                success: function (data){
+                    alert("get cart");
+                    // console.log(data);
+                   var $list = $('#cartBody');
+                   var item = '';
+                  $('#Total span').text(formatNumber(data.tong));
+                   if(data.cart.length > 0){
+                      for(var i =0; i< data.cart.length; i++)
+                      {
+                          item += `
+                                    <tr machitiet="${data.cart[i].MaChiTietSanPham}">
+                                        <td>
+                                            <div class="img">
+                                                <a href="#"><img src="../Image/SanPham/${data.cart[i].HinhAnhSanPham}" alt="Hình ảnh"></a>
+                                                <p>${data.cart[i].TenSanPham}</p>
+                                            </div>
+                                        </td>
+                                        <td>${formatNumber(data.cart[i].DonGiaBan)}đ</td>
+                                        <td>
+                                            <div class="qty">
+                                                <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                                    <input type="text" value="${data.cart[i].sl}" min="1">
+                                                <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                        </td>
+                                        <td>${formatNumber(data.cart[i].thanhtien)}đ</td>
+                                        <td><button id="btn-xoaSP"><i class="fa fa-trash"></i></button></td>
+                                    </tr>
+                          `;
+                          
+                      }
+
+
+                   }
+                       $list.html(item);
+                           console.log("HTML đã render xong!", item);
+
+
+                }
+            });
+
+           function slHioHang(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/cartSL',
+                method: 'GET',
+                dataType: 'json',
+                xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+                 },
+                error: function (res) {
+                       alert("lỗi");
+                 },
+                success: function (data){
+                    alert("so luong cart");
+                    console.log(data.soluong);
+                    $('#cartSL').text(data.soluong)
+
+                }
+            });
+        }
+
+        
+            function xoakhoigiohang(machitietsp){
+                $.ajax({
+                     url: 'http://127.0.0.1:5000/remove-from-cart',
+                     method: 'POST',
+                     contentType: 'application/json',
+                     dataType: 'json',
+                     xhrFields: {
+                         withCredentials: true  // Cho phép gửi và nhận cookie
+                     },
+                    data: JSON.stringify({
+                        "machitietsp": machitietsp,
+                    }),
+                    error: function (res) {
+                             alert("lỗi");
+                     },
+                     success: function(res){
+                        alert("xoa ok");
+                            getCart();
+                             slGioHang();
+
+                     }
+                });
+            }
+
+                //click xoa
+                    $('body').on('click', '#btn-xoaSP', function () {
+                          // Lấy phần tử <tr> cha chứa thuộc tính machitiet
+                           let tr = this.closest('tr');
+
+                           // alert('xoa');
+                          // Lấy giá trị của thuộc tính machitiet
+                          let machitiet = tr.getAttribute('machitiet');
+                          alert(machitiet);
+                          xoakhoigiohang(machitiet);
+                          
+                     });
+    }
+    </script>
+}

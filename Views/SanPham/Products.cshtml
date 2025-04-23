@@ -1,0 +1,529 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+  @model List<SanPham>
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home" >Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="SanPham" >Sản phẩm</a></li>
+            @{
+                if(ViewBag.TenTK != null){
+                    <li class="breadcrumb-item active" id="tenmuc" >@ViewBag.TenTK</li>
+                }
+                if(ViewBag.tl != null){
+                    <li class="breadcrumb-item active" id="tenmuc">@ViewBag.tl</li>
+
+                }
+            }
+            
+        </ul>
+    </div>
+</div>
+<!-- Kết thúc Breadcrumb -->
+<!-- Bắt đầu danh sách sản phẩm -->
+<div class="product-view">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Bắt đầu thanh bên -->
+            <div class="col-lg-3 sidebar">
+                <div class="sidebar-widget category">
+                    <h2 class="title">Danh mục</h2>
+                    @* @await Component.InvokeAsync("Category") *@
+                    <nav class="navbar bg-light">
+                        <!-- Gọi component Category ở đây -->  
+
+                        <ul class="navbar-nav" id="category-list">
+                            <li class="nav-item">
+                                @* <a class="nav-link" href="#"><i class="fa fa-home"></i>Tất cả</a> *@
+                                <a class="nav-link" asp-action="Index" asp-controller="SanPham"><i class="fa fa-home"></i>Tất cả</a>
+                            </li>
+                        @*     @foreach (var item in Model) *@
+                        @* { *@
+                        @*     <li class="nav-item" id="@item.MaLoaiHang"> *@
+                        @*         <a class="nav-link" style="cursor: pointer"><i class="fa "></i>@item.TenLoaiHang</a> *@
+                        @*     </li> *@
+                        @* } *@
+
+                        </ul>
+                    </nav>
+                   
+                </div>
+
+                <!-- Bắt đầu thương hiệu -->
+                <div class="sidebar-widget brands">
+                   @*  <h2 class="title">Thương hiệu</h2>
+                    <ul>
+                        <li><a href="#">Nulla</a><span>(45)</span></li>
+                        <li><a href="#">Curabitur</a><span>(34)</span></li>
+                        <li><a href="#">Nunc</a><span>(67)</span></li>
+                        <li><a href="#">Ullamcorper</a><span>(74)</span></li>
+                        <li><a href="#">Fusce</a><span>(89)</span></li>
+                        <li><a href="#">Sagittis</a><span>(28)</span></li>
+                    </ul> *@
+                </div>
+
+                <!-- Bắt đầu thẻ tag -->
+                <div class="sidebar-widget tag">
+                    <h2 class="title">Thẻ phổ biến</h2>
+                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Vivamus</a>
+                    <a href="#">Phasellus</a>
+                    <a href="#">pulvinar</a>
+                    <a href="#">Curabitur</a>
+                    <a href="#">Fusce</a>
+                    <a href="#">Sem quis</a>
+                    <a href="#">Mollis metus</a>
+                    <a href="#">Sit amet</a>
+                    <a href="#">Vel posuere</a>
+                    <a href="#">orci luctus</a>
+                    <a href="#">Nam lorem</a>
+                </div>
+            </div>
+            <!-- Kết thúc thanh bên -->
+            <!-- Bắt đầu danh sách sản phẩm chính -->
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-view-top">
+                            <div class="row">
+                                <!-- Tìm kiếm -->
+                                <!--
+                                     <div class="col-md-4">
+                                    <form>
+                                        <div class="product-search">
+                                            <input type="text" id="timkiem" name="timkiem" placeholder="Tìm kiếm">
+                                            <button id="btnSearch" type="button"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                                -->
+                               
+
+                                <!-- Sắp xếp -->
+                                <div class="col-md-4">
+                                    <div class="product-short">
+                                        <div class="dropdown">
+                                            <div class="dropdown-toggle" data-toggle="dropdown">Sắp xếp theo</div>
+                                            <div class="dropdown-menu dropdown-menu-right" id="sapxep">
+                                                <a href="#" class="dropdown-item" sx="AZ">A-Z</a>
+                                                <a href="#" class="dropdown-item" sx="ZA">Z-A</a>
+                                                <a href="#" class="dropdown-item">Mới</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Khoảng giá -->
+                                <div class="col-md-4">
+                                    <div class="product-price-range">
+                                        <div class="dropdown">
+                                            <div class="dropdown-toggle" data-toggle="dropdown">Giá</div>
+                                            <div class="dropdown-menu dropdown-menu-right" id="sapxep">
+                                                <a href="#" class="dropdown-item" sx="giatang">Giá tăng dần</a>
+                                                <a href="#" class="dropdown-item" sx="giagiam">Giá giảm dần</a>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kết thúc tìm kiếm/sắp xếp/khoảng giá -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <!-- Danh sách sản phẩm -->
+                    <div class="row " id="dssp">
+                        <!-- PartialSanPham sẽ được render ở đây -->
+                        <partial name="PartialSanPham_DM" model="Model" />
+                    </div>
+                   
+
+                    <!-- Bắt đầu phân trang -->
+                    <!--
+                        
+                    -->
+                    
+                    <!-- Kết thúc phân trang -->
+                    <!-- Pagination Start -->
+                    <div class="col-md-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center" id="pagination">
+                                <!--
+                                     <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                                -->
+                                @{
+                                    int currentPage = ViewBag.pageIndex == null ? 1 : ViewBag.pageIndex;
+                                    int totalPages = ViewBag.pageNum == null ? 1 : ViewBag.pageNum;
+                                    int startPage = Math.Max(1, currentPage - 1);
+                                    int endPage = Math.Min(totalPages, currentPage + 1);
+
+                                    if (endPage - startPage < 2)
+                                    {
+                                        startPage = Math.Max(1, endPage - 2);
+                                        endPage = Math.Min(totalPages, startPage + 2);
+                                    }
+                                }
+
+                                @if (startPage > 1)
+                                {
+                                    <li class="page-item"><a class="page-link page-btn" href="#" data-page="1" @(ViewBag.maloai != null ? $"maloai = '{ViewBag.maloai}'" : "")
+                                        @(ViewBag.TenTK != null ? $"tentk = {ViewBag.TenTK}" : "") @(ViewBag.loaisx != null ? $"loaisx = {ViewBag.loaisx}" : "") >1</a>
+                                    </li>
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                                }
+
+                                @for (int i = startPage; i <= endPage; i++)
+                                {
+                                    <li class="page-item @(i == currentPage ? "active" : "")">
+                                        <a class="page-link page-btn" href="#" data-page="@i" @(ViewBag.maloai != null ? $"maloai = '{ViewBag.maloai}'" : "")
+                                        @(ViewBag.TenTK != null ? $"tentk = {ViewBag.TenTK}" : "") @(ViewBag.loaisx != null ? $"loaisx = {ViewBag.loaisx}" : "") >@i</a>
+                                    </li>
+                                }
+
+                                @if (endPage < totalPages)
+                                {
+                                    <li class="page-item disabled"><span class="page-link">...</span></li>
+                                    <li class="page-item"><a class="page-link page-btn" href="#" data-page="@totalPages" @(ViewBag.maloai != null ? $"maloai = '{ViewBag.maloai}'" : "")
+                                        @(ViewBag.TenTK != null ? $"tentk = {ViewBag.TenTK}" : "") @(ViewBag.loaisx != null ? $"loaisx = {ViewBag.loaisx}" : "") >@totalPages</a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+
+                     
+                    <!-- Pagination Start -->
+                </div>
+               
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+    <div class="col-md-12">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+
+}
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+-->
+
+
+
+
+
+<!-- Product List End --> 
+@* <partial name="DanhSachSanPham"/> *@
+
+@*AJAX*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+           getDanhMuc();
+        });
+
+     $('a#addCart').click(function(){
+        addCart();
+        // setCookie();
+    })
+
+    function getCart(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/cart',
+            method: 'GET',
+            dataType: 'json',
+
+            error: function (res) {
+                     alert("lỗi");
+             },
+            success: function (data){
+                alert("get cart");
+                console.log(data);
+                var carts  = data.cart_items;
+               var $list = $('#cartBody');
+
+            }
+        });
+    }
+    function addCart(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/add-to-cart',
+            method: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            xhrFields: {
+        withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+    },
+            data: JSON.stringify({
+                "machitietsp": $('a#addCart').data('id'),
+                "sl" : 1
+            }),
+            error: function (res) {
+                   alert("lỗi");
+             },
+            success: function (data){
+                alert("add cart");
+                console.log(data);
+
+            }
+        });
+    }
+    function setCookie(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/set_cookie',
+            method: 'GET',
+            xhrFields: {
+        withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+    },
+            error: function (res) {
+                     alert("lỗi");
+             },
+            success: function (data){
+                alert("set cookie");
+                console.log(data);
+
+
+            }
+        });
+    }
+        function getDanhMuc(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/DanhMuc',
+                method: 'GET',
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     alert("ok");
+                     console.log(res);
+                     var $list = $('#category-list');
+                     //$list.empty(); Xóa dữ liệu cũ (nếu có)
+
+                   $.each(res, function (index,item) {
+                    var html = `
+                         <li class="nav-item" id=${item.MaLoaiHang}>
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
+                         </li>
+                        `;
+
+                    $list.append(html);
+                });
+                },
+                fail: function (response) { }
+                });
+        }
+
+         //sự kiện click vào so trang
+            $('body').on('click', '.page-btn', function (e) {
+                e.preventDefault();
+             var page = $(this).data("page");
+            var maloai =  $(this).attr("maloai");
+            var timkiem = $(this).attr("tentk");
+            var loaisx = $(this).attr("loaisx");
+            var data = { maloai: maloai, tentk: timkiem, pageindex: page,loaisx:loaisx};
+            $.ajax({
+                url: "/SanPham/Loc",
+                data: data,
+                success: function (response) {
+                    alert(loaisx);
+                    $("div#content").html(response);
+                    
+                },error: function (res) {
+                 alert("lỗi");
+                }
+            });
+            });
+            $(document).on('click', '.page-btn', function (e) {
+              e.preventDefault(); // Ngăn mặc định chuyển trang nếu href="#"
+
+             // Bỏ class active ở tất cả .page-item
+             $('.page-item').removeClass('active');
+
+             // Thêm class active vào thẻ <li> cha của nút vừa bấm
+             $(this).closest('.page-item').addClass('active');
+
+             // (Tuỳ chọn) Xử lý chuyển trang logic khác ở đây...
+            const page = $(this).data('page');
+            console.log("Trang được chọn:", page);
+
+        // Gọi AJAX hoặc load lại trang tuỳ mục đích
+    });
+
+
+        //săp xep 
+             $(".dropdown").on('click','a',function (e) {
+                e.preventDefault();
+                var loaisx = $(this).attr("sx");
+                 var maloai =  $(".page-btn").attr("maloai");
+                 var timkiem = $(".page-btn").attr("tentk");
+                var data = {maloai: maloai, tentk: timkiem, loaisx : loaisx };
+            $.ajax({
+                url: "/SanPham/Loc",
+                data: data,
+                success: function (response) {
+                    alert(timkiem);
+                    $("div#content").html(response);
+
+                    // Cập nhật giao diện active
+                       $('.page-item').removeClass('active');
+                       $(this).parent().addClass('active');
+
+                },error: function (res) {
+                 alert("lỗi");
+                }
+            });
+            });
+                  
+       
+
+         //theo ma loai
+        // $(".navbar-nav li").click(function (e) {
+        //     var maloai = $(this).attr("id");
+        //     ml = $(this).attr("id");
+        //     var data = { maloai: maloai };
+        //     $.ajax({
+        //         url: "/SanPham/LocSP",
+        //         data: data,
+        //         success: function (response) {
+        //             alert(maloai);
+        //             $("div#content").html(response);
+                    
+        //         }
+        //     });
+
+        // });
+
+         $(".navbar-nav").on('click','li',function (e) {
+            var maloai = $(this).attr("id");
+            ml = $(this).attr("id");
+            var ten = $(this).find('a').text().trim();
+            var data = { maloai: maloai };
+            $.ajax({
+                url: "/SanPham/Loc",
+                data: data,
+                success: function (response) {
+                    alert(maloai);
+                    $('#tenmuc').text(ten);
+                    $("div#content").html(response);
+
+                }
+            });
+
+        });
+
+         //theo ma loai
+        // $(".navbar-nav li").click(function (e) {
+        //     var maloai = $(this).attr("id");
+        //     ml = $(this).attr("id");
+        //     getloai_total(maloai);
+        //     getloai_page(maloai);
+        //     renderPagination();
+        // });
+
+        function formatNumber(num) {
+            if (!num) return "";
+            return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
+        }
+
+        function getloai_total(maloai){
+             $.ajax({
+                url: 'http://127.0.0.1:5000/api/sanpham/loai?maloai=' + maloai,
+                method: 'GET',
+                // contentType: 'application/json',
+                dataType: 'json',
+                error: function () {
+                    alert("Lỗi khi tải sản phẩm liên quan");
+                },
+                success: function (res){
+                    totalPages = res.length;
+                    alert(totalPages);
+                }
+            });
+        }
+
+        function getloai_page(maloai){
+             $.ajax({
+                url: 'http://127.0.0.1:5000/api/sanpham/page?maloai=' + maloai,
+                method: 'GET',
+                // contentType: 'application/json',
+                dataType: 'json',
+                error: function () {
+                    alert("Lỗi khi tải sản phẩm liên quan");
+                },
+                success: function (res) {
+                    console.log(res);
+                    let productListHtml = '';
+                    if (res.length > 0) {
+                        res.forEach(function(product){
+                            productListHtml += `
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">
+                                                <img src="../Image/SanPham/${product.HinhAnhSanPham.trim()}" alt="Hình sản phẩm">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#" class="addCart" data-id="${product.MaSanPham}"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">${product.TenSanPham}</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3>${formatNumber(product.GiaToiThieu)}đ</h3>
+                                            <p style="text-decoration: line-through; float: right;">${formatNumber(product.GiaToiDa)}đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            
+                        });
+                    
+                        $('div#dssp').html(productListHtml); //Cập nhật toàn bộ sau khi duyệt xong
+                        
+                    } else {
+                        $('div#dssp').html('<p>Không có sản phẩm liên quan.</p>');
+                    }
+                }
+            });
+        }
+           
+ 
+
+
+    </script>
+

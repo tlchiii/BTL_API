@@ -1,0 +1,87 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!-- Nav Bar Start -->
+<div class="top-0 fixed-top nav " style="position: fixed; ">
+    <div class="container-fluid my-3 ">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto">
+                    <a href="~/Home" class="nav-item nav-link active">Trang chủ</a>
+                    <a href="~/Home/Products" class="nav-item nav-link">Danh mục</a>
+                    @* <a href="product-detail.html" class="nav-item nav-link">Product Detail</a> *@
+                    @* <a asp-action="ProductDetail" asp-controller="Home"  class="nav-item nav-link">Product Detail</a> *@
+                    
+                    <a href="~/Home/Cart" class="nav-item nav-link">Cart</a>
+                    <a href="~/Home/CheckOut" class="nav-item nav-link">Checkout</a>
+                    <a href="my-account.html" class="nav-item nav-link">My Account</a>
+                     @* <div class="nav-item dropdown">
+                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
+                         <div class="dropdown-menu">
+                             <a href="wishlist.html" class="dropdown-item">Wishlist</a>
+                             <a href="login.html" class="dropdown-item">Login & Register</a>
+                             <a href="contact.html" class="dropdown-item">Contact Us</a>
+                         </div>
+                     </div> *@
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                        <div class="dropdown-menu">
+                            <a asp-action="Login" asp-controller="Access" class="dropdown-item">Login</a>
+                            <a asp-action="" asp-controller="Access" class="dropdown-item">Register</a>
+                            <a asp-action="Logout" asp-controller="Access" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Nav Bar End -->
+<!-- Bottom Bar Start -->
+<div class="bottom-bar" style="margin-top: 100px">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="~/img/logo.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="search">
+                        @* <input id="timkiem" type="text" placeholder="Search"> *@
+                        <input id="timkiem" type="text" placeholder="Search" />
+                        <a asp-action="Search" asp-controller="Home">
+
+                        </a>
+                        <button id="btnsearch" type="button"><i class="fa fa-search"></i></button>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-3">
+                <div class="user">
+                    <a href="wishlist.html" class="btn wishlist">
+                        <i class="fa fa-heart"></i>
+                        <span>(0)</span>
+                    </a>
+                    <a href="cart.html" class="btn cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>(0)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bottom Bar End -->

@@ -1,0 +1,197 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+  @model IEnumerable<SanPham>
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+            <li class="breadcrumb-item active">Danh sách sản phẩm</li>
+        </ul>
+    </div>
+</div>
+<!-- Kết thúc Breadcrumb -->
+<!-- Bắt đầu danh sách sản phẩm -->
+<div class="product-view">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Bắt đầu thanh bên -->
+            <div class="col-lg-4 sidebar">
+                <div class="sidebar-widget category">
+                    <h2 class="title">Danh mục</h2>
+                    <nav class="navbar bg-light">
+                        <!-- Gọi component Category ở đây -->
+                        <ul class="navbar-nav" id="category-list">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-home"></i>Home</a>
+                            </li>
+                            @* @foreach (var item in Model)
+                        {
+                            <li class="nav-item" id="@item.MaLoaiHang">
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>@item.TenLoaiHang</a>
+                            </li>
+                        } *@
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Bắt đầu thương hiệu -->
+                <div class="sidebar-widget brands">
+                   @*  <h2 class="title">Thương hiệu</h2>
+                    <ul>
+                        <li><a href="#">Nulla</a><span>(45)</span></li>
+                        <li><a href="#">Curabitur</a><span>(34)</span></li>
+                        <li><a href="#">Nunc</a><span>(67)</span></li>
+                        <li><a href="#">Ullamcorper</a><span>(74)</span></li>
+                        <li><a href="#">Fusce</a><span>(89)</span></li>
+                        <li><a href="#">Sagittis</a><span>(28)</span></li>
+                    </ul> *@
+                </div>
+
+                <!-- Bắt đầu thẻ tag -->
+                <div class="sidebar-widget tag">
+                    <h2 class="title">Thẻ phổ biến</h2>
+                    <a href="#">Lorem ipsum</a>
+                    <a href="#">Vivamus</a>
+                    <a href="#">Phasellus</a>
+                    <a href="#">pulvinar</a>
+                    <a href="#">Curabitur</a>
+                    <a href="#">Fusce</a>
+                    <a href="#">Sem quis</a>
+                    <a href="#">Mollis metus</a>
+                    <a href="#">Sit amet</a>
+                    <a href="#">Vel posuere</a>
+                    <a href="#">orci luctus</a>
+                    <a href="#">Nam lorem</a>
+                </div>
+            </div>
+            <!-- Kết thúc thanh bên -->
+            <!-- Bắt đầu danh sách sản phẩm chính -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="product-view-top">
+                            <div class="row">
+                                <!-- Tìm kiếm -->
+                                <div class="col-md-4">
+                                    <form>
+                                        <div class="product-search">
+                                            <input type="text" id="timkiem" name="timkiem" placeholder="Tìm kiếm">
+                                            <button id="btnSearch" type="button"><i class="fa fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Sắp xếp -->
+                                <div class="col-md-4">
+                                    <div class="product-short">
+                                        <div class="dropdown">
+                                            <div class="dropdown-toggle" data-toggle="dropdown">Sắp xếp theo</div>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">Mới nhất</a>
+                                                <a href="#" class="dropdown-item">Phổ biến</a>
+                                                <a href="#" class="dropdown-item">Bán chạy</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Khoảng giá -->
+                                <div class="col-md-4">
+                                    <div class="product-price-range">
+                                        <div class="dropdown">
+                                            <div class="dropdown-toggle" data-toggle="dropdown">Khoảng giá</div>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item">$0 đến $50</a>
+                                                <a href="#" class="dropdown-item">$51 đến $100</a>
+                                                <a href="#" class="dropdown-item">$101 đến $150</a>
+                                                <a href="#" class="dropdown-item">$151 đến $200</a>
+                                                <a href="#" class="dropdown-item">$201 đến $250</a>
+                                                <a href="#" class="dropdown-item">$251 đến $300</a>
+                                                <a href="#" class="dropdown-item">$301 đến $350</a>
+                                                <a href="#" class="dropdown-item">$351 đến $400</a>
+                                                <a href="#" class="dropdown-item">$401 đến $450</a>
+                                                <a href="#" class="dropdown-item">$451 đến $500</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Kết thúc tìm kiếm/sắp xếp/khoảng giá -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <!-- Danh sách sản phẩm -->
+                    <div class="row ">
+                        <!-- PartialSanPham sẽ được render ở đây -->
+                        <partial name="PartialSanPham" model="Model"/>
+                    </div>
+
+                    <!-- Bắt đầu phân trang -->
+                    <div class="col-md-12">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                @for (int i = 1; i <= ViewBag.pageNum; i++)
+                                {
+                                    <li class="page-item" page="@i"
+                                    @(ViewBag.maloai != null ? "maloai = '@ViewBag.maloai'" : "")
+                                    @(ViewBag.TenTK != null ? "tentk = '@ViewBag.TenTK'" : "")>
+                                        <a class="page-link">@i</a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Kết thúc phân trang -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product List End --> 
+@* <partial name="DanhSachSanPham"/> *@
+
+@*AJAX*@
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        getDanhMuc()
+
+    });
+
+    function getDanhMuc(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/DanhMuc',
+            method: 'GET',
+            dataType: 'json',
+            error: function (res) {
+                 alert("lỗi");
+            },
+            success: function (res) {
+                 // alert("ok");
+                 console.log(res);
+                 var $list = $('#category-list');
+                 //$list.empty(); Xóa dữ liệu cũ (nếu có)
+
+               $.each(res, function (index,item) {
+                var html = `
+                     <li class="nav-item" id=${item.MaLoaiHang}>
+                            <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
+                     </li>
+                    `;
+
+                $list.append(html);
+            });
+            },
+            fail: function (response) { }
+            });
+    }
+
+</script>

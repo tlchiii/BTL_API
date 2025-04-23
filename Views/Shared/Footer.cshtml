@@ -1,0 +1,147 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<!-- Bắt đầu Footer -->
+<div class="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Liên hệ -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h2>Liên Hệ</h2>
+                    <div class="contact-info">
+                        <p><i class="fa fa-map-marker"></i>99 Nguyễn Chí Thanh, Đống Đa, Hà Nội</p>
+                        <p><i class="fa fa-envelope"></i>UTC@gmail.com</p>
+                        <p><i class="fa fa-phone"></i>+123-456-7890</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theo dõi chúng tôi -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h2>Theo Dõi Chúng Tôi</h2>
+                    <div class="contact-info">
+                        <div class="social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bản đồ -->
+            <div class="col-lg-6 col-md-6" style='width: 600px; height: 300px;' id="map">
+                <!--
+                    <div class="map_main">
+                        <div class="map-responsive">
+                            <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                -->
+            </div>
+
+            <!-- Các phần bị ẩn (thông tin công ty và chính sách mua hàng) nếu cần dịch thêm có thể bỏ dấu  -->
+
+        </div>
+
+        <!-- Phương thức thanh toán và bảo mật -->
+        <div class="row payment align-items-center">
+            <div class="col-md-6">
+                <div class="payment-method">
+                    <h2>Chúng Tôi Chấp Nhận:</h2>
+                    <img src="img/payment-method.png" alt="Phương thức thanh toán" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="payment-security">
+                    <h2>Bảo Mật Bởi:</h2>
+                    <img src="img/godaddy.svg" alt="Bảo mật thanh toán" />
+                    <img src="img/norton.svg" alt="Bảo mật thanh toán" />
+                    <img src="img/ssl.svg" alt="Bảo mật thanh toán" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Kết thúc Footer -->
+
+<!-- Bắt đầu Footer dưới -->
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 copyright">
+                <p>Bản quyền &copy; <a href="#">Tên Website Của Bạn</a>. Đã đăng ký bản quyền.</p>
+            </div>
+
+            <div class="col-md-6 template-by">
+                <p>Thiết kế bởi <a href="https://htmlcodex.com">HTML Codex</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer Bottom End -->
+<script>
+         mapboxgl.accessToken ='pk.eyJ1Ijoibmd1eWVudGh1aHVvbmcxOTg3IiwiYSI6ImNrb2Y4dXNlNTBqcmQzMXRyZXA3Yng2NDUifQ.VXut_atNnNAiiw5pi5PwDg';
+
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [105.811, 21.02], //Tọa độ lãnh thổ Việt Nam
+        zoom: 15
+    });
+     var marker = new mapboxgl.Marker({
+            color: 'red',
+            draggable: false, //keo tha
+            anchor: 'bottom'
+         }).setLngLat([105.811,21.02])
+    .addTo(map);
+
+     map.on('load', function () {
+        map.setLayoutProperty('country-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('state-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('settlement-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('road-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('settlement-minor-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('water-point-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('building-number-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('block-number-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('settlement-minor-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('settlement-subdivision-label', 'text-field', ['get', 'name_vi']);
+        map.setLayoutProperty('continent-label', 'text-field', ['get', 'name_vi']);
+
+        // Danh sách các layer cần đổi ngôn ngữ
+             const labelLayers = [
+                        'country-label',
+                        'continent-label',
+                        'state-label',
+                        'settlement-label',
+                        'settlement-minor-label',
+                        'settlement-subdivision-label',
+                        'water-point-label',
+                        'water-line-label',
+                        'water-label',
+                        'road-label',
+                        'block-number-label',
+                        'building-number-label',
+                        'building-entrance',
+                        'poi-label'
+                    ];
+
+            //  labelLayers.forEach(layer => {
+            //             Kiểm tra layer có tồn tại không trước khi chỉnh
+            //     if (map.getLayer(layer)) {
+            //       map.setLayoutProperty(layer, 'text-field', ['get', 'name_vi']);
+            //     }
+            // });
+    });
+
+    
+</script>

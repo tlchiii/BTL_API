@@ -1,0 +1,609 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@* <h1>Day la RenderBody</h1> *@
+
+@model IEnumerable<SanPham>
+<!-- Bottom Bar Start -->
+
+<!-- Bottom Bar End -->
+<!-- Main Slider Start -->
+<div class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Left Menu -->
+            <div class="col-md-3" id="danhmuc">
+                @await Component.InvokeAsync("Category")
+
+                <!--
+                    <nav class="navbar bg-light">
+                    <ul class="navbar-nav" id="category-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-home"></i>Home</a>
+                        </li>
+                @* @foreach (var item in Model)
+                        {
+                            <li class="nav-item" id="@item.MaLoaiHang">
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>@item.TenLoaiHang</a>
+                            </li>
+                        } *@
+
+                    </ul>
+                </nav>
+                -->
+                
+                
+            </div>
+
+
+            <div class="col-md-9">
+
+                <div class="header-slider normal-slider">
+                    <div class="header-slider-item">
+                        <img src="/Image/27-28_banner.png" alt="Slider Image" />
+                    </div>
+                    <div class="header-slider-item">
+                        <img src="/Image/37-40_banner.png" alt="Slider Image" />
+
+                    </div>
+                    <div class="header-slider-item">
+                        <img src="/Image/30-35_banner.png" alt="Slider Image" />
+                    </div>
+                    @* <div class="header-slider-item"> *@
+                    @*     <img src="img/slider-3.jpg" alt="Slider Image" /> *@
+                    @*     <div class="header-slider-caption"> *@
+                    @*         <p>Some text goes here that describes the image</p> *@
+                    @*         <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a> *@
+                    @*     </div> *@
+                    @* </div> *@
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Main Slider End -->
+<!-- Brand Start -->
+<div class="brand">
+    <div class="container-fluid">
+        <div class="brand-slider">
+            <div class="brand-item"><img src="~/Image/home_partner_1.jpg" alt=""></div>
+            <div class="brand-item"><img src="~/Image/home_partner_2.jpg" alt=""></div>
+            <div class="brand-item"><img src="~/Image/home_partner_3.jpg" alt=""></div>
+            <div class="brand-item"><img src="~/Image/home_partner_5.jpg" alt=""></div>
+            <div class="brand-item"><img src="~/Image/home_partner_6.jpg" alt=""></div>
+            <div class="brand-item"><img src="/Image/home_partner_9.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!-- Brand End -->
+<!-- Feature Start-->
+<div class="feature">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <h2>Thanh Toán An Toàn</h2>
+                    <p>
+                        Thanh toán bảo mật, an tâm mua sắm
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-truck"></i>
+                    <h2>Giao Hàng Toàn Quốc</h2>
+                    <p>
+                        Giao hàng nhanh chóng đến mọi nơi
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-sync-alt"></i>
+                    <h2>Đổi Trả Trong 7 Ngày</h2>
+                    <p>
+                        Hỗ trợ đổi trả dễ dàng trong 7 ngày
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 feature-col">
+                <div class="feature-content">
+                    <i class="fa fa-comments"></i>
+                    <h2>Hỗ Trợ 24/7</h2>
+                    <p>
+                        Tư vấn và hỗ trợ khách hàng mọi lúc
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Feature End-->
+<!-- Category Start-->
+<div class="category">
+    @* <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="category-item ch-400">
+                        <img src="img/category-3.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-250">
+                        <img src="img/category-4.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                    <div class="category-item ch-150">
+                        <img src="img/category-5.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-150">
+                        <img src="img/category-6.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                    <div class="category-item ch-250">
+                        <img src="img/category-7.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-400">
+                        <img src="img/category-8.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+</div>
+<!-- Category End-->
+<!-- Call to Action Start -->
+<!-- Call to Action End -->
+<!-- Featured Product Start -->
+<div class="featured-product product">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h1>Sản Phẩm Nổi Bật</h1>
+        </div>
+        <!--
+             <div class="row align-items-center ">
+        @* <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">Product Name</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="product-detail.html">
+                                <img src="~/img/product-1.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3><span>$</span>99</h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">Product Name</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="product-detail.html">
+                                <img src="img/product-2.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3><span>$</span>99</h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">Product Name</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="product-detail.html">
+                                <img src="img/product-3.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3><span>$</span>99</h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">Product Name</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="product-detail.html">
+                                <img src="img/product-4.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3><span>$</span>99</h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">Product Name</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a href="product-detail.html">
+                                <img src="img/product-5.jpg" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3><span>$</span>99</h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+                    </div>
+                </div> *@
+        </div>
+        -->
+        <!-- product-slider product-slider-4-->
+        <div class="row align-items-center product-slider product-slider-4 ">
+             @* <partial name="PartialSanPham"/> *@
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 col-sm-2">
+                    <div class="product-item">
+                        <div class="product-image">
+                            <a href="#">
+                                <img src="@Url.Content("../Image/SanPham/" + item.HinhAnhSanPham)" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                @* <a href="#"><i class="fa fa-cart-plus"></i></a> *@
+                                @* <a href="#"><i class="fa fa-heart"></i></a> *@
+                                <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-title">
+                            <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham">@item.TenSanPham</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <h3 style="">@Convert.ToDecimal(item.GiaToiThieu).ToString("#,##0")<span>đ</span></h3>
+                            <h5 style="text-decoration: line-through; float: right;">@Convert.ToDecimal(item.GiaToiDa).ToString("#,##0")</h5>
+                            @* <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a> *@
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</div>
+<!-- Featured Product End -->
+<!-- Newsletter Start -->
+<div class="newsletter">
+    @*  <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Subscribe Our Newsletter</h1>
+                </div>
+                <div class="col-md-6">
+                    <div class="form">
+                        <input type="email" value="Your email here">
+                        <button>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div> *@
+</div>
+<!-- Newsletter End -->
+<!-- Recent Product Start -->
+<div class="recent-product product">
+    <div class="container-fluid">
+        <div class="section-header">
+            <h1>Sản Phẩm Gần Đây</h1>
+        </div>
+        @*  align-items-center product-slider product-slider-4 *@
+        <div class="row align-items-center" id="spnoibat">
+            @* <partial name="PartialSanPham" /> *@
+            @* @foreach (var i in Model)
+            {
+                <div class="col-lg-3">
+                    <div class="product-item">
+                        <div class="product-title">
+                            <a href="#">@i.TenSanPham</a>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="product-image">
+                            <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham">
+                                <img src="@Url.Content("../Image/SanPham/" + i.HinhAnhSanPham)" alt="Product Image">
+                            </a>
+                            <div class="product-action">
+                                <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                                <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-price ">
+                            <h3 style="color: #ffffff">@Convert.ToInt32(i.GiaToiDa)<span>đ</span></h3>
+                            <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                        </div>
+
+
+                    </div>
+                </div>
+            } *@
+
+        </div>
+
+    </div>
+</div>
+<!-- Recent Product End -->
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // getDanhMuc()
+            getSPNB();
+
+
+
+            // $('li.nav-item').click(function(e){
+            // var maloai = $(this).attr("id")
+            // var data = {maloai : maloai};
+            // $.ajax({
+            //     url: "ProductFilter",
+            //     data: data,
+            //     success: function(res){
+            //        $()
+            //     }
+            // })
+        });
+
+        function getDanhMuc(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/DanhMuc',
+                method: 'GET',
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     // alert("ok");
+                     console.log(res);
+                     var $list = $('#category-list');
+                     //$list.empty(); Xóa dữ liệu cũ (nếu có)
+
+                   $.each(res, function (index,item) {
+                    var html = `
+                         <li class="nav-item" id=${item.MaLoaiHang}>
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
+                         </li>
+                        `;
+                       
+                    $list.append(html);
+                    });
+                },
+                fail: function (response) { }
+           });
+        }
+
+        function formatNumber(num) {
+            if (!num) return "";
+            return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
+        }
+
+         function getSPNB() {
+            $.ajax({
+                url: 'http://127.0.0.1:5000/home/ganday',
+                method: 'GET',
+                dataType: 'json',
+                error: function () {
+                    alert("Lỗi khi tải sản phẩm ");
+                },
+                success: function (res) {
+                    alert('get splq');
+                    console.log(res);
+                    let productListHtml = '';
+                    if (res.length > 0) {
+                        res.forEach(function(product) {
+                            productListHtml += `
+                                <div class="col-md-3">
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">
+                                                <img src="../Image/SanPham/${product.HinhAnhSanPham.trim()}" alt="Hình sản phẩm">
+                                            </a>
+                                            <div class="product-action">
+                                                <a href="#" class="addCart" data-id="${product.MaSanPham}"><i class="fa fa-cart-plus"></i></a>
+                                                <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}"><i class="fa fa-search"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-title">
+                                            <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">${product.TenSanPham}</a>
+                                            <div class="ratting">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <h3>${formatNumber(product.GiaToiThieu)}đ</h3>
+                                            <p style="text-decoration: line-through; float: right;">${formatNumber(product.GiaToiDa)}đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                           
+                        });
+
+                        $('#spnoibat').html(productListHtml); //Cập nhật toàn bộ sau khi duyệt xong
+                    } else {
+                        $('#spnoibat').html('<p>Không có sản phẩm liên quan.</p>');
+                    }
+                }
+            });
+        }
+
+         $('a#addCart').click(function(){
+            addCart();
+            // setCookie();
+        })
+
+        function getCart(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/cart',
+                method: 'GET',
+                dataType: 'json',
+
+                error: function (res) {
+                         alert("lỗi");
+                 },
+                success: function (data){
+                    alert("get cart");
+                    console.log(data);
+                    var carts  = data.cart_items;
+                   var $list = $('#cartBody');
+
+                }
+            });
+        }
+        function addCart(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/add-to-cart',
+                method: 'POST',
+                contentType: 'application/json',
+                dataType: 'json',
+                xhrFields: {
+            withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+        },
+                data: JSON.stringify({
+                    "machitietsp": $('a#addCart').data('id'),
+                    "sl" : 1
+                }),
+                error: function (res) {
+                       alert("lỗi");
+                 },
+                success: function (data){
+                    alert("add cart");
+                    console.log(data);
+
+                }
+            });
+        }
+        function setCookie(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/set_cookie',
+                method: 'GET',
+                xhrFields: {
+            withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+        },
+                error: function (res) {
+                         alert("lỗi");
+                 },
+                success: function (data){
+                    alert("set cookie");
+                    console.log(data);
+
+
+                }
+            });
+        }
+
+    </script>
+}

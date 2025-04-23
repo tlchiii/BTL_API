@@ -1,0 +1,27 @@
+﻿ @model IEnumerable<LoaiHang> 
+
+
+    <nav class="navbar bg-light">
+        <ul class="navbar-nav">
+             <li class="nav-item">
+                 <a class="nav-link" asp-action="Index" asp-controller="SanPham" ><i class="fa fa-home"></i>Tất cả</a>
+             </li>
+         @foreach(var item in Model)
+        {
+             <li class="nav-item" id="@item.MaLoaiHang">
+                <a class="nav-link" style="cursor: pointer" asp-action="Index" asp-controller="SanPham" asp-route-maloai="@item.MaLoaiHang" asp-route-tenloai ="@item.TenLoaiHang ">
+                    <i class="fa "></i>@item.TenLoaiHang</a>
+            </li>
+
+           @*  <li class="nav-item " id="@item.MaLoaiHang"> 
+                <a class="nav-link" style="cursor: pointer">
+                    <i class="fa "></i>@item.TenLoaiHang
+                </a>
+             </li> *@
+        } 
+            
+         </ul>
+     </nav>
+
+
+

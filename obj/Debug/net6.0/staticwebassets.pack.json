@@ -1,0 +1,1157 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BTL_API_VanPhongPham.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BTL_API_VanPhongPham.qztvo7sd7u.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\17_banner.png",
+      "PackagePath": "staticwebassets\\Image\\17_banner.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\27-28_banner.png",
+      "PackagePath": "staticwebassets\\Image\\27-28_banner.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\30-35_banner.png",
+      "PackagePath": "staticwebassets\\Image\\30-35_banner.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\37-40_banner.png",
+      "PackagePath": "staticwebassets\\Image\\37-40_banner.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Bia_nua_Pazto Flexoffice FO-CBF010_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Bia_nua_Pazto Flexoffice FO-CBF010_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Bia_nut_Pazto Flexoffice FO-CBF010_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Bia_nut_Pazto Flexoffice FO-CBF010_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Bia_nut_Pazto Flexoffice FO-CBF010_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Bia_nut_Pazto Flexoffice FO-CBF010_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_bi_Maxxie_Thien_Long_TP-05_4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_chi_go_2B_FO-GP06_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_chi_go_2B_FO-GP06_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_chi_go_2B_FO-GP06_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_chi_go_2B_FO-GP06_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_chi_go_2B_FO-GP06_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_chi_go_2B_FO-GP06_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da-quang_Thien_Long_HL-03_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_5.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_5.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_6.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_FlexOffice _FO-HL05_6.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_5.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_5.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_6.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\But_da_quang_Thien_Long_HL-07_6.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Hop_20_But_Bi_Thien_Long_TL-027_4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Thuoc-keo-5M1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Thuoc-keo-5M1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Thuoc-keo-5M2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Thuoc-keo-5M2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\Thuoc-keo-5M3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\Thuoc-keo-5M3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bamlo1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bamlo1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bamlo2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bamlo2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bamlo3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bamlo3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bang-dinh-trong-suot1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bang-dinh-trong-suot1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bang-dinh-trong-suot2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bang-dinh-trong-suot2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bang-dinh-trong-suot3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bang-dinh-trong-suot3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bangkeo1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bangkeo1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bangkeo2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bangkeo2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bangkeo3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bangkeo3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\boc_sach_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\boc_sach_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bocsach1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bocsach1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bocsach2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bocsach2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\bocsach4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\bocsach4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\boeke1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\boeke1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\boeke2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\boeke2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\boeke3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\boeke3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\boeke4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\boeke4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butbi1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butbi1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butbi2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butbi2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butbi3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butbi3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butchi1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butchi1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butchi2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butchi2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butchi3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butchi3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butgel1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butgel1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butgel2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butgel2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butgel3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butgel3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butkim1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butkim1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butkim2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butkim2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butkim3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butkim3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butkim4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butkim4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butmuc1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butmuc1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butmuc2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butmuc2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butmuc3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butmuc3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butxoa1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butxoa1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butxoa2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butxoa2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\butxoa3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\butxoa3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\compa1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\compa1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\compa2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\compa2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\dapghim1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\dapghim1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\dapghim2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\dapghim2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\dapghim3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\dapghim3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\dapghim4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\dapghim4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daquang1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daquang1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daquang2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daquang2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daquang3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daquang3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daydeothe1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daydeothe1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daydeothe2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daydeothe2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daydeothe3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daydeothe3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daythung1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daythung1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daythung2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daythung2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\daythung3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\daythung3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\ghimkepgiay1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\ghimkepgiay1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\ghimkepgiay2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\ghimkepgiay2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\ghimkepgiay3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\ghimkepgiay3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-biacung-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-biacung-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-biacung-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-biacung-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-biacung-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-biacung-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-carton-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-carton-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-carton-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-carton-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-carton-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-carton-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-carton-4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-carton-4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-danhan-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-danhan-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-danhan-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-danhan-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-danhan-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-danhan-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-giaymau-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-giaymau-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-giaymau-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-giaymau-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-giaymau-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-giaymau-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-note-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-note-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-note-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-note-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-note-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-note-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-photo-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-photo-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-photo-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-photo-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-photo-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-photo-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-sotay-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-sotay-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-sotay-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-sotay-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-sotay-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-sotay-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-than-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-than-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-than-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-than-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay-than-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay-than-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A4_70_gsm_IK_Copy_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\giay_A5_70_gsm_IK_Copy_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\hopdungbut1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\hopdungbut1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\hopdungbut2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\hopdungbut2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\hopdungbut3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\hopdungbut3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\keo1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\keo1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\keo2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\keo2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\keo3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\keo3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kepfile1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kepfile1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kepfile2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kepfile2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kepfile3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kepfile3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kepgo1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kepgo1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kepgo2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kepgo2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\khaydungtailieu1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\khaydungtailieu1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\khaydungtailieu2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\khaydungtailieu2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\khaydungtailieu3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\khaydungtailieu3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kich-thuoc-khung-anh-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kich-thuoc-khung-anh-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kich-thuoc-khung-anh-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kich-thuoc-khung-anh-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\kich-thuoc-khung-anh-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\kich-thuoc-khung-anh-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\maytinhbotui1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\maytinhbotui1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\maytinhbotui2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\maytinhbotui2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\maytinhbotui3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\maytinhbotui3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\mieng-lau-bang-1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\mieng-lau-bang-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\mieng-lau-bang-2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\mieng-lau-bang-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\mieng-lau-bang-3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\mieng-lau-bang-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\taygiay1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\taygiay1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\taygiay2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\taygiay2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\taygiay3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\taygiay3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-day3m1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-day3m1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-day3m2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-day3m2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-day3m3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-day3m3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-ke-30cm1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-ke-30cm1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-ke-30cm2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-ke-30cm2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuoc-ke-30cm3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuoc-ke-30cm3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuocke15_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuocke15_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuocke15_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuocke15_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\thuocke15_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\thuocke15_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB061_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB061_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB061_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB061_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB061_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB061_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB061_4.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB061_4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB075_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB075_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB075_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB075_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\SanPham\\vo_TP-NB075_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\SanPham\\vo_TP-NB075_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_1.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_2.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_3.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_5.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_5.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_6.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_6.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\Image\\home_partner_9.jpg",
+      "PackagePath": "staticwebassets\\Image\\home_partner_9.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-1.png",
+      "PackagePath": "staticwebassets\\img\\brand-1.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-2.png",
+      "PackagePath": "staticwebassets\\img\\brand-2.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-3.png",
+      "PackagePath": "staticwebassets\\img\\brand-3.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-4.png",
+      "PackagePath": "staticwebassets\\img\\brand-4.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-5.png",
+      "PackagePath": "staticwebassets\\img\\brand-5.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\brand-6.png",
+      "PackagePath": "staticwebassets\\img\\brand-6.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-1.jpg",
+      "PackagePath": "staticwebassets\\img\\category-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-2.jpg",
+      "PackagePath": "staticwebassets\\img\\category-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-3.jpg",
+      "PackagePath": "staticwebassets\\img\\category-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-4.jpg",
+      "PackagePath": "staticwebassets\\img\\category-4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-5.jpg",
+      "PackagePath": "staticwebassets\\img\\category-5.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-6.jpg",
+      "PackagePath": "staticwebassets\\img\\category-6.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-7.jpg",
+      "PackagePath": "staticwebassets\\img\\category-7.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\category-8.jpg",
+      "PackagePath": "staticwebassets\\img\\category-8.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\godaddy.svg",
+      "PackagePath": "staticwebassets\\img\\godaddy.svg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\norton.svg",
+      "PackagePath": "staticwebassets\\img\\norton.svg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\payment-method.png",
+      "PackagePath": "staticwebassets\\img\\payment-method.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-10.jpg",
+      "PackagePath": "staticwebassets\\img\\product-10.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product-6.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-7.jpg",
+      "PackagePath": "staticwebassets\\img\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-8.jpg",
+      "PackagePath": "staticwebassets\\img\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\product-9.jpg",
+      "PackagePath": "staticwebassets\\img\\product-9.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\review-1.jpg",
+      "PackagePath": "staticwebassets\\img\\review-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\review-2.jpg",
+      "PackagePath": "staticwebassets\\img\\review-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\review-3.jpg",
+      "PackagePath": "staticwebassets\\img\\review-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\slider-1.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-1.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\slider-2.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-2.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\slider-3.jpg",
+      "PackagePath": "staticwebassets\\img\\slider-3.jpg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\ssl.svg",
+      "PackagePath": "staticwebassets\\img\\ssl.svg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\config.rb",
+      "PackagePath": "staticwebassets\\lib\\slick\\config.rb"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\lib\\slick\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\lib\\slick\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\lib\\slick\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\lib\\slick\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick-theme.less",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick-theme.less"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick-theme.scss",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick-theme.scss"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick.js",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick.less",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick.less"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick.min.js",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick.min.js"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\lib\\slick\\slick.scss",
+      "PackagePath": "staticwebassets\\lib\\slick\\slick.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BTL_API_VanPhongPham.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BTL_API_VanPhongPham.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BTL_API_VanPhongPham.props",
+      "PackagePath": "build\\BTL_API_VanPhongPham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BTL_API_VanPhongPham.props",
+      "PackagePath": "buildMultiTargeting\\BTL_API_VanPhongPham.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BTL_API_VanPhongPham.props",
+      "PackagePath": "buildTransitive\\BTL_API_VanPhongPham.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

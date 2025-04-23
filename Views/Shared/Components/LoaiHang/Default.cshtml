@@ -1,0 +1,15 @@
+﻿ @model IEnumerable<LoaiHang>
+
+
+<div class="dropdown nav-item ms-md-0 me-3 me-lg-4 d-inline-block">
+    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Loại</a>
+    <ul class="dropdown-menu dropdown-menu-end" id ="nav" aria-labelledby="navbarDropdown">
+        @foreach (var m in Model)
+        {
+            <li class="dropdown-item" id="@m.MaLoaiHang">
+                <a class="nav-link " style="cursor: pointer">@m.TenLoaiHang</a>
+            </li>
+        }
+
+    </ul>
+</div>

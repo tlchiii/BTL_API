@@ -1,0 +1,47 @@
+﻿
+@model IEnumerable<SanPham>
+
+<div class="row ">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="product-item">
+                <div class="product-image">
+                    <a href="#">
+                        <img src="@Url.Content("../Image/SanPham/" + item.HinhAnhSanPham)" alt="Product Image">
+                    </a>
+                    <div class="product-action">
+                        @* <a href="#" id="addCart" data-id="CTSP2003_ca"><i class="fa fa-cart-plus"></i></a> *@
+                        @* <a href="#"><i class="fa fa-heart"></i></a> *@
+                        <a asp-action="ChiTiet" asp-controller="SanPham" asp-route-masp="@item.MaSanPham"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+                <div class="product-title">
+                    <a asp-action="ChiTiet" asp-controller="SanPham" asp-route-masp="@item.MaSanPham">@item.TenSanPham</a>
+                    <div class="ratting">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="product-price">
+                    <!--
+                        <h3 style="">@Convert.ToDecimal(item.GiaToiThieu).ToString("#,##0")<span>đ</span></h3>
+                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Buy Now</a>
+                    -->
+                    <h3>@Convert.ToDecimal(item.GiaToiThieu).ToString("#,##0")đ</h3>
+                    <h5 style="text-decoration: line-through; float: right;">@Convert.ToDecimal(item.GiaToiDa).ToString("#,##0")</h5>
+
+
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+
+

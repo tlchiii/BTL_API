@@ -1,0 +1,575 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@* @model SanPham *@
+@model List<ChiTietSP>
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="SanPham">Sản phẩm</a></li>
+            <li class="breadcrumb-item active">Chi tiết sản phẩm</li>
+        </ul>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Product Detail Start -->
+<div class="product-detail">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- TOP -->
+                <div class="product-detail-top">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="product-slider-single normal-slider" id="anhsp_big">
+
+                                @{
+                                    if(ViewBag.AnhSP != null){
+                                        @foreach (var img in ViewBag.AnhSP)
+                                        {
+                                            <img src="@Url.Content("../Image/SanPham/" + img.TenHinhAnh)" alt="Hình sản phẩm">
+                                        }
+                                    }
+                                }
+                                
+                            </div>
+                            <div class="normal-slider product-slider-single-nav" id="anhsp_small">
+                                @{
+                                    if(ViewBag.AnhSP != null){
+                                        @foreach (var img in ViewBag.AnhSP)
+                                        {
+                                            <div class="slider-nav-img"><img src="@Url.Content("../Image/SanPham/" + img.TenHinhAnh)" alt="Hình sản phẩm"></div>
+                                        }
+                                    }
+                                }
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-content">
+                                <div class="title" id="TenSP"><h2>@ViewBag.TenSP</h2></div>
+                                @* <div class="title"><h2 id="TenSP"></h2></div> *@
+                                <div class="ratting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="p-size">
+                                    <h4>Mã SP: </h4>
+                                    @{
+                                        if(Model.Count > 0){
+                                            <p id="machitiet">@Model[0].MaChiTietSanPham</p>
+                                        }
+                                    }
+                                    
+                                </div>
+                                <div class="price">
+                                    <h4>Giá:</h4>
+                                    <p>@Convert.ToDecimal(ViewBag.GiaToiThieu).ToString("#,##0")<span>@Convert.ToDecimal(ViewBag.GiaToiDa).ToString("#,##0")</span></p>
+                                    @* <p id="giatd"><span id="giatt"></span></p> *@
+                                </div>
+                                <div class="quantity">
+                                    <h4>Số lượng</h4>
+                                    <div class="qty">
+                                        <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                        <input type="text" id="SL" value="1">
+                                        <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <!--
+                                    <div class="p-size">
+                                    <h4>Kích cỡ:</h4>
+                                    <div class="btn-group btn-group-sm">
+                                        <button type="button" class="btn">S</button>
+                                        <button type="button" class="btn">M</button>
+                                        <button type="button" class="btn">L</button>
+                                        <button type="button" class="btn">XL</button>
+                                    </div>
+                                </div>
+                                -->
+                                @{
+                                    if(Model.Count > 1){
+                                        <div class="p-color">
+                                            <h4>Màu sắc:</h4>
+                                            <div class="btn-group btn-group-sm">
+                                                @foreach (var sp in Model)
+                                                {
+                                                    <button type="button" class="btn color-btn" data-machitiet="@sp.MaChiTietSanPham">@sp.TenMau</button>
+                                                }
+                                                <!--
+                                                   <button type="button" class="btn color-btn">Trắng</button>
+                                                <button type="button" class="btn color-btn">Đen</button>
+                                                <button type="button" class="btn color-btn">Xanh dương</button>
+                                                -->
+
+
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                
+                                <div class="action">
+                                    <a class="btn" id="addCart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
+                                    <a class="btn" asp-action="MuaNgay" asp-controller="Home" ><i class="fa fa-shopping-bag"></i>Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row product-detail-bottom">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#description">Mô tả</a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#specification">Thông số</a>
+                            </li>
+                            -->
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#reviews">Đánh giá (1)</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="description" class="container tab-pane active">
+                                <h4>Chi tiết sản phẩm</h4>
+                                <!--
+                                 <p>@ViewBag.ChiTiet</p>
+                                -->
+                               
+                                <p id="chitiet"></p>
+                                <p>
+                                    Trang bị ngay combo bút viết mượt và thước đo chính xác – món đồ không thể thiếu cho học sinh, sinh viên và dân văn phòng!
+                                </p>
+                                <ul>
+                                    <li>✔️ Bút mực ra đều, nét đẹp, không lem</li>
+                                    <li>✔️ Thước nhựa cao cấp, vạch rõ ràng, độ bền cao</li>
+                                    <li>✔️ Thiết kế nhỏ gọn, tiện mang theo mọi lúc mọi nơi</li>
+                                    <li>✔️ Giá siêu tiết kiệm – chất lượng vượt mong đợi!</li>
+                                    <li>👉 Phù hợp dùng tại trường học, nơi làm việc hay trong các kỳ thi quan trọng.</li>
+                                    <li>🛒 Thêm vào giỏ ngay hôm nay để nhận ưu đãi hấp dẫn!</li>
+                                </ul>
+                                    
+                                
+                            </div>
+                            <!--
+                                                        <div id="specification" class="container tab-pane fade">
+                                                            <h4>Thông số kỹ thuật</h4>
+                                                            <ul>
+                                                                <li>Lorem ipsum dolor sit amet</li>
+                                                                <li>Lorem ipsum dolor sit amet</li>
+                                                                <li>Lorem ipsum dolor sit amet</li>
+                                                                <li>Lorem ipsum dolor sit amet</li>
+                                                                <li>Lorem ipsum dolor sit amet</li>
+                                                            </ul>
+                                                        </div>
+-->
+                            
+                            <div id="reviews" class="container tab-pane fade">
+                                <div class="reviews-submitted">
+                                    <div class="reviewer">Phasellus Gravida - <span>01 Tháng 1 2020</span></div>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                                    </p>
+                                </div>
+                                <div class="reviews-submit">
+                                    <h4>Gửi đánh giá của bạn:</h4>
+                                    <div class="ratting">
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <div class="row form">
+                                        <div class="col-sm-6">
+                                            <input type="text" placeholder="Tên của bạn">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="email" placeholder="Email của bạn">
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <textarea placeholder="Nội dung đánh giá"></textarea>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button>Gửi đánh giá</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="section-header">
+                        <h1>Sản phẩm liên quan</h1>
+                    </div>
+
+                    <div class="row align-items-center" id="splq">
+                       
+                        <!-- Dưới đây là các mục sản phẩm mẫu -->
+                        <!--
+                        product-slider product-slider-4"
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Tên sản phẩm</a>
+                                    <div class="ratting">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html"><img src="img/product-10.jpg" alt="Hình sản phẩm"></a>
+                                    <div class="product-action">
+                                        <a href="#"><i class="fa fa-cart-plus"></i></a>
+                                        <a href="#"><i class="fa fa-heart"></i></a>
+                                        <a href="#"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>$</span>99</h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Mua ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                        
+                        <!-- Các mục sản phẩm khác tương tự -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Product Detail End -->
+
+          
+            <!-- Side Bar End --> 
+<!-- Product Detail End -->
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            getSPLQ();
+            $('.p-color .btn').first().addClass('active');
+
+            // getSP();
+            // getAnh();
+            // getSPLQ();
+        });
+
+        let selectedColor = null;
+        let selectedSize = null;
+
+        // Xử lý chọn màu
+        document.querySelectorAll('.color-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                selectedColor = this.getAttribute('data-machitiet');
+                document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                // Set nội dung vào thẻ <p id="machitiet">
+                 document.getElementById('machitiet').textContent = selectedColor;
+            });
+        });
+
+        function getSPLQ(){
+            $.ajax({
+                url: '/SanPham/SPLienQuan',
+                method: 'GET',
+                data: {
+                    maloai: '@ViewBag.Maloai'
+                },
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     alert("ok");
+                     console.log(res);
+                     $("#splq").html(res);
+                   
+                }
+            });
+        }
+
+
+        // function getSPLQ() {
+        //     $.ajax({
+        //         url: 'http:127.0.0.1:5000/api/sanpham/loai?maloai=' + '@ViewBag.maloai',
+        //         method: 'GET',
+        //         error: function () {
+        //             alert("Lỗi khi tải sản phẩm liên quan");
+        //         },
+        //         success: function (res) {
+        //             alert('get splq');
+        //             console.log(res);
+        //             let productListHtml = '';
+        //             if (res.length > 0) {
+        //                 res.forEach(function(product) {
+        //                     productListHtml += `
+        //                         <div class="col-md-3">
+        //                             <div class="product-item">
+        //                                 <div class="product-image">
+        //                                     <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">
+        //                                         <img src="../Image/SanPham/${product.HinhAnhSanPham.trim()}" alt="Hình sản phẩm">
+        //                                     </a>
+        //                                     <div class="product-action">
+        //                                         <a href="#" class="addCart" data-id="${product.MaSanPham}"><i class="fa fa-cart-plus"></i></a>
+        //                                         <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}"><i class="fa fa-search"></i></a>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div class="product-title">
+        //                                     <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">${product.TenSanPham}</a>
+        //                                     <div class="ratting">
+        //                                         <i class="fa fa-star"></i>
+        //                                         <i class="fa fa-star"></i>
+        //                                         <i class="fa fa-star"></i>
+        //                                         <i class="fa fa-star"></i>
+        //                                         <i class="fa fa-star"></i>
+        //                                     </div>
+        //                                 </div>
+        //                                 <div class="product-price">
+        //                                     <h3>${formatNumber(product.GiaToiThieu)}đ</h3>
+        //                                     <p style="text-decoration: line-through; float: right;">${formatNumber(product.GiaToiDa)}đ</p>
+        //                                 </div>
+        //                             </div>
+        //                         </div>
+        //                     `;
+        //                     $('#splq').append(productListHtml);
+        //                 });
+
+        //                 $('#splq').html(productListHtml); Cập nhật toàn bộ sau khi duyệt xong
+        //             } else {
+        //                 $('#splq').html('<p>Không có sản phẩm liên quan.</p>');
+        //             }
+        //         }
+        //     });
+        // }
+
+
+        function getAnh(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/sp/Image?masp=' + '@ViewBag.masp',
+                method: 'GET',  
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                
+                success: function (res) {
+                     alert("anh");
+                     console.log(res);
+                    var $list_big = $('#anhsp_big');
+                    var $list_small = $('#anhsp_small');
+                     $list_big.empty(); //Xóa dữ liệu cũ (nếu có)
+                     $list_small.empty();
+
+                     var html_small = "";
+                     var html_big = "";
+                   $.each(res, function (index,item) {
+                       html_small += `
+                         <div class="slider-nav-img"><img src="../Image/SanPham/${item.TenHinhAnh.trim()}" alt="Hình sản phẩm"></div>
+                        `;
+                       html_big += `
+                            <img src="../Image/SanPham/${item.TenHinhAnh.trim()}" alt="Hình sản phẩm">
+                    `;
+
+                   });
+
+                   // $list_big.append(html_big);
+                   // $list_small.append(html_small);
+
+                   $list_big.html(html_big);
+                   $list_small.html(html_small);
+                }
+            });
+        }
+
+        function getDanhMuc(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/DanhMuc',
+                method: 'GET',
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     alert("ok");
+                     console.log(res);
+                     var $list = $('#category-list');
+                     //$list.empty(); Xóa dữ liệu cũ (nếu có)
+
+                   $.each(res, function (index,item) {
+                    var html = `
+                         <li class="nav-item" id=${item.MaLoaiHang}>
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
+                         </li>
+                        `;
+
+                    $list.append(html);
+                });
+                },
+                fail: function (response) { }
+                });
+        }
+
+        function formatNumber(num) {
+            if (!num) return "";
+            return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
+        }
+
+        function getSP(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/sp/search?masp=' + '@ViewBag.masp',
+                method: 'GET',
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     alert("get sp");
+                     console.log(res[0]);
+                     $("#TenSP").text(res[0].TenSanPham);
+                     $("#giatd").text(formatNumber(res[0].GiaToiDa));
+                     $("#giatt").text(formatNumber(res[0].GiaToiThieu));
+                     $("#chitiet").text(res[0].ChiTiet);
+                },
+                fail: function (response) { }
+                });
+        }
+
+        function getChiTiet(){
+            $.ajax({
+                url: 'http://127.0.0.1:5000/DanhMuc',
+                method: 'GET',
+                dataType: 'json',
+                error: function (res) {
+                     alert("lỗi");
+                },
+                success: function (res) {
+                     alert("ok");
+                     console.log(res);
+                     var $list = $('#category-list');
+                     //$list.empty(); Xóa dữ liệu cũ (nếu có)
+
+                   $.each(res, function (index,item) {
+                    var html = `
+                         <li class="nav-item" id=${item.MaLoaiHang}>
+                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
+                         </li>
+                        `;
+
+                    $list.append(html);
+                });
+                },
+                fail: function (response) { }
+                });
+        }
+
+      $('body').on('click','a#addCart',function(){
+        addCart();
+        
+        // setCookie();
+    })
+
+    function getCart(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/cart',
+            method: 'GET',
+            contentType: 'aplication/json',
+            dataType: 'json',
+
+            error: function (res) {
+                     alert("lỗi");
+             },
+            success: function (data){
+                alert("get cart");
+                console.log(data);
+                var carts  = data.cart_items;
+               var $list = $('#cartBody');
+
+            }
+        });
+    }
+    function slGioHang(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/cartSL',
+            method: 'GET',
+            dataType: 'json',
+            xhrFields: {
+                 withCredentials: true  // Cho phép gửi và nhận cookie
+             },
+            error: function (res) {
+                   alert("lỗi");
+             },
+            success: function (data){
+                alert("so luong cart");
+                console.log(data.soluong);
+                $('#cartSL').text(data.soluong)
+
+            }
+        });
+    }
+
+    function addCart(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/add-to-cart',
+            method: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            xhrFields: {
+        withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+    },
+            data: JSON.stringify({
+                "machitietsp": $('p#machitiet').text(),
+                "sl" : parseInt($('input#SL').val())
+            }),
+            error: function (res) {
+                   alert("lỗi");
+             },
+            success: function (data){
+                alert("add cart");
+                console.log(data);
+                slGioHang();
+            }
+        });
+    }
+    function setCookie(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/set_cookie',
+            method: 'GET',
+            xhrFields: {
+        withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
+    },
+            error: function (res) {
+                     alert("lỗi");
+             },
+            success: function (data){
+                alert("set cookie");
+                console.log(data);
+
+
+            }
+        });
+    }
+    </script>
+
+
