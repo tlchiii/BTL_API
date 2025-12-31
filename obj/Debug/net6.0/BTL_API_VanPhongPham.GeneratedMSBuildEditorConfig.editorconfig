@@ -24,16 +24,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/WEB_BTL/BTL_API_VanPhongPham/Views/Cart/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/WEB_BTL/BTL_API_VanPhongPham/Views/Home/BuyNow.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXlOb3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/WEB_BTL/BTL_API_VanPhongPham/Views/Home/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WEB_BTL/BTL_API_VanPhongPham/Views/Home/Check.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVjay5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/WEB_BTL/BTL_API_VanPhongPham/Views/Home/CheckOut.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGVja091dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/WEB_BTL/BTL_API_VanPhongPham/Views/Home/danhmuc.cshtml]

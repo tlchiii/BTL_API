@@ -12,10 +12,10 @@
 
     <!-- Google Fonts -->
     <!--
-         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
 
     -->
-    
+
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 
     <!-- Template Stylesheet -->
     <link href="~/css/style.css" rel="stylesheet">
-     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!--MAP BOX -->
@@ -35,8 +35,8 @@
 
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.js"></script>
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.1/mapbox-gl-directions.css"
-          type="text/css" />
-      
+    type="text/css" />
+
 </head>
 
 <body>
@@ -47,7 +47,34 @@
 
 
     <main id="main">
+
         @RenderBody()
+
+        @if (ViewBag.ShowChatbot == true)
+        {
+            <div class="chat-toggle-button" onclick="toggleChatbox()">💬</div>
+            <div class="chatbox" id="chatbox">
+                <div class="chat-header">
+                    <div>Chăm sóc khách hàng</div>
+                    <span onclick="closeChatbox()">&times;</span>
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message">
+                        <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                        <div>Xin chào! Tôi có thể giúp gì cho bạn?</div>
+                    </div>
+                    <div class="option-buttons" id="main-options">
+                        <button onclick="getPromotions()">Chương trình khuyến mãi</button>
+                        <button onclick="openFacebookMessenger()">Chăm sóc khách hàng</button>
+                    </div>
+                </div>
+                <div class="chat-footer">
+                    <input type="text" id="userInput" placeholder="Nhập nội dung..." onkeypress="handleKeyPress(event)">
+                    <button onclick="sendMessage()">Gửi</button>
+                </div>
+            </div>
+         }
+
     </main>
     <!-- FOOTER -->
   <footer>
@@ -71,4 +98,151 @@
 
 </body>
 </html>
+
+    <script>
+        function toggleChatbox() {
+            const chatbox = document.getElementById('chatbox');
+            chatbox.style.display = 'flex';
+        }
+
+        function closeChatbox() {
+            const chatbox = document.getElementById('chatbox');
+            chatbox.style.display = 'none';
+        }
+
+                        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chatBody = document.getElementById('chatBody');
+            const message = input.value.trim().toLowerCase();
+
+            if (message !== '') {
+                chatBody.innerHTML += `<div class='message user-message'>${input.value}</div>`;
+                chatBody.scrollTop = chatBody.scrollHeight;
+                input.value = '';
+
+                // ✅ Tách từ trong tin nhắn
+                const words = message.split(/\s+/); // tách từng từ trong câu
+
+                // Gọi API kiểm tra từng từ
+                let found = false;
+
+                words.forEach((word, index) => {
+                    fetch(`http://localhost:5000/api/loaisanpham/search?keyword=${encodeURIComponent(word)}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (!found && data.status === 'success' && data.data.length > 0) {
+                                found = true;
+                                const loai = data.data[0];
+                                chatBody.innerHTML += botMessage(`Đang chuyển bạn đến sản phẩm: ${loai.TenLoaiHang}...`);
+                                setTimeout(() => {
+                                    window.location.href = `/SanPham?maloai=${loai.MaLoaiHang}&tenloai=${encodeURIComponent(loai.TenLoaiHang)}`;
+                                }, 1000);
+                            } else if (index === words.length - 1 && !found) {
+                                chatBody.innerHTML += botMessage("Xin lỗi, tôi không thể giúp bạn! Bạn có thể chọn chăm sóc khách hàng để được tư vấn chi tiết nhất");
+                            }
+                            chatBody.scrollTop = chatBody.scrollHeight;
+                        })
+                        .catch(error => {
+                            if (!found) {
+                                chatBody.innerHTML += botMessage("Đã xảy ra lỗi khi kết nối tới máy chủ.");
+                                chatBody.scrollTop = chatBody.scrollHeight;
+                            }
+                        });
+                });
+            }
+        }
+
+        function botMessage(text) {
+            return `
+                <div class='message bot-message'>
+                    <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                    <div>${text}</div>
+                </div>
+            `;
+        }
+
+
+        function botMessage(text) {
+            return `
+                <div class='message bot-message'>
+                    <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                    <div>${text}</div>
+                </div>
+            `;
+        }
+
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                sendMessage();
+            }
+        }
+
+        function getPromotions() {
+            const chatBody = document.getElementById('chatBody');
+            chatBody.innerHTML += `<div class='message user-message'>Chương trình khuyến mãi</div>`;
+
+            fetch('http://localhost:5000/khuyenmai')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        chatBody.innerHTML += `
+                            <div class='message bot-message'>
+                                <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                                <div><strong>Các chương trình khuyến mãi trong 3 tháng tới:</strong></div>
+                            </div>
+                        `;
+
+                        data.data.forEach(km => {
+                            chatBody.innerHTML += `
+                                <div class='message bot-message'>
+                                    <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                                    <div><strong>${km.ChuDe}</strong><br>📅 ${km.NoiDung}</div>
+                                </div>
+                            `;
+                        });
+
+                        chatBody.innerHTML +=`
+                            <div class='message bot-message'>
+                                <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                                <div>Bạn cần hỗ trợ gì không?</div>
+                            </div>
+                            <div class="option-buttons" id="main-options">
+                                <button onclick="showMainOptions()">Trở về</button>
+                            </div>
+                        `;
+                    } else {
+                        chatBody.innerHTML += `<div class='message bot-message'>
+                            <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                            <div>Không thể tải dữ liệu khuyến mãi.</div>
+                        </div>`;
+                    }
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                })
+                .catch(error => {
+                    chatBody.innerHTML += `<div class='message bot-message'>
+                        <img src="https://i.imgur.com/9M1qN5j.png" class="bot-avatar" alt="bot">
+                        <div>Lỗi kết nối đến server.</div>
+                    </div>`;
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                });
+        }
+
+        function showMainOptions() {
+            const chatBody = document.getElementById('chatBody');
+            chatBody.innerHTML += `
+                <div class="option-buttons" id="main-options">
+                    <button onclick="getPromotions()">Chương trình khuyến mãi</button>
+                    <button onclick="openFacebookMessenger()">Chăm sóc khách hàng</button>
+                </div>
+            `;
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+    <script>
+        function openFacebookMessenger() {
+            window.open("https://www.facebook.com/people/V%C4%83n-ph%C3%B2ng-ph%E1%BA%A9m-Smile/61575275860667/", "_blank");
+        }
+    </script>
 

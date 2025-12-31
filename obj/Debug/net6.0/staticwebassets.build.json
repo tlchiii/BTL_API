@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FDEC0V+hiOruhnVzz6hg9jE/XXwiq2VbVu5/MU4ymrw=",
+  "Hash": "Nd/POEkVoTyQWCg6vvMmbe1IHpjEqd+RXz9hzsmqpSU=",
   "Source": "BTL_API_VanPhongPham",
   "BasePath": "_content/BTL_API_VanPhongPham",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ry8zyhepfd",
-      "Integrity": "3YFAobJHZt+RK8A4fb5hUzAfkFUJBtmZ6uxajpGnlHQ=",
+      "Fingerprint": "56sq1hlf2y",
+      "Integrity": "41lCaJYXHXv6wwV9ueYC8mNK5D6yJu/kehbbeXjaG5E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
@@ -4007,6 +4007,48 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
+      "Identity": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_1.png",
+      "SourceId": "BTL_API_VanPhongPham",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\",
+      "BasePath": "_content/BTL_API_VanPhongPham",
+      "RelativePath": "img/logo_1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ljchj33i0b",
+      "Integrity": "wej8JuRZ/lcf3CObVJ3bKS6YAPaiE6sBiv+uh3aG8sA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo_1.png"
+    },
+    {
+      "Identity": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_2.png",
+      "SourceId": "BTL_API_VanPhongPham",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\",
+      "BasePath": "_content/BTL_API_VanPhongPham",
+      "RelativePath": "img/logo_2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f2l4me45bg",
+      "Integrity": "WW6V2cxmMTroJBry//R+dbjlHgaiW4pSCxY9+hTdPzE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo_2.png"
+    },
+    {
       "Identity": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\norton.svg",
       "SourceId": "BTL_API_VanPhongPham",
       "SourceType": "Discovered",
@@ -6005,7 +6047,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 16:33:55 GMT"
+          "Value": "Thu, 24 Apr 2025 07:26:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6042,7 +6084,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 16:33:55 GMT"
+          "Value": "Thu, 24 Apr 2025 07:26:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6087,7 +6129,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 16:33:55 GMT"
+          "Value": "Thu, 24 Apr 2025 07:26:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6132,7 +6174,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 17 Apr 2025 16:33:55 GMT"
+          "Value": "Thu, 24 Apr 2025 07:26:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6229,6 +6271,51 @@
       ]
     },
     {
+      "Route": "css/style.56sq1hlf2y.css",
+      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\css\\style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "50420"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"41lCaJYXHXv6wwV9ueYC8mNK5D6yJu/kehbbeXjaG5E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 05:20:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "56sq1hlf2y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-41lCaJYXHXv6wwV9ueYC8mNK5D6yJu/kehbbeXjaG5E="
+        }
+      ]
+    },
+    {
       "Route": "css/style.css",
       "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\css\\style.css",
       "Selectors": [],
@@ -6239,7 +6326,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "47071"
+          "Value": "50420"
         },
         {
           "Name": "Content-Type",
@@ -6247,11 +6334,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3YFAobJHZt+RK8A4fb5hUzAfkFUJBtmZ6uxajpGnlHQ=\""
+          "Value": "\"41lCaJYXHXv6wwV9ueYC8mNK5D6yJu/kehbbeXjaG5E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 14:07:11 GMT"
+          "Value": "Fri, 25 Apr 2025 05:20:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6261,52 +6348,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-3YFAobJHZt+RK8A4fb5hUzAfkFUJBtmZ6uxajpGnlHQ="
-        }
-      ]
-    },
-    {
-      "Route": "css/style.ry8zyhepfd.css",
-      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\css\\style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "47071"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3YFAobJHZt+RK8A4fb5hUzAfkFUJBtmZ6uxajpGnlHQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 22 Apr 2025 14:07:11 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ry8zyhepfd"
-        },
-        {
-          "Name": "label",
-          "Value": "css/style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-3YFAobJHZt+RK8A4fb5hUzAfkFUJBtmZ6uxajpGnlHQ="
+          "Value": "sha256-41lCaJYXHXv6wwV9ueYC8mNK5D6yJu/kehbbeXjaG5E="
         }
       ]
     },
@@ -21559,6 +21601,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-BCYA9iEjvTsiqtQly3kH6+sSWi4YiXNgij02iJYbUe4="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo_1.ljchj33i0b.png",
+      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wej8JuRZ/lcf3CObVJ3bKS6YAPaiE6sBiv+uh3aG8sA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 15:32:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ljchj33i0b"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo_1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wej8JuRZ/lcf3CObVJ3bKS6YAPaiE6sBiv+uh3aG8sA="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo_1.png",
+      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25541"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wej8JuRZ/lcf3CObVJ3bKS6YAPaiE6sBiv+uh3aG8sA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 15:32:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wej8JuRZ/lcf3CObVJ3bKS6YAPaiE6sBiv+uh3aG8sA="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo_2.f2l4me45bg.png",
+      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WW6V2cxmMTroJBry//R+dbjlHgaiW4pSCxY9+hTdPzE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:07:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f2l4me45bg"
+        },
+        {
+          "Name": "label",
+          "Value": "img/logo_2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WW6V2cxmMTroJBry//R+dbjlHgaiW4pSCxY9+hTdPzE="
+        }
+      ]
+    },
+    {
+      "Route": "img/logo_2.png",
+      "AssetFile": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WW6V2cxmMTroJBry//R+dbjlHgaiW4pSCxY9+hTdPzE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Apr 2025 18:07:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WW6V2cxmMTroJBry//R+dbjlHgaiW4pSCxY9+hTdPzE="
         }
       ]
     },

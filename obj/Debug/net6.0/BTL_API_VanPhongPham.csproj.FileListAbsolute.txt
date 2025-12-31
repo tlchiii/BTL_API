@@ -1,10 +1,3 @@
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.GeneratedMSBuildEditorConfig.editorconfig
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.AssemblyInfoInputs.cache
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.AssemblyInfo.cs
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.csproj.CoreCompileInputs.cache
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.MvcApplicationPartsAssemblyInfo.cache
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.RazorAssemblyInfo.cache
-C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.RazorAssemblyInfo.cs
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\appsettings.Development.json
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\appsettings.json
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\BTL_API_VanPhongPham.staticwebassets.runtime.json
@@ -14,6 +7,14 @@ C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\BTL_API_VanPhongPham.deps.json
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\BTL_API_VanPhongPham.runtimeconfig.json
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\BTL_API_VanPhongPham.dll
 C:\WEB_BTL\BTL_API_VanPhongPham\bin\Debug\net6.0\BTL_API_VanPhongPham.pdb
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.GeneratedMSBuildEditorConfig.editorconfig
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.AssemblyInfoInputs.cache
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.AssemblyInfo.cs
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.csproj.CoreCompileInputs.cache
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.MvcApplicationPartsAssemblyInfo.cache
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.RazorAssemblyInfo.cache
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.RazorAssemblyInfo.cs
+C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\BTL_API_VanPhongPham.sourcelink.json
 C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\scopedcss\bundle\BTL_API_VanPhongPham.styles.css
 C:\WEB_BTL\BTL_API_VanPhongPham\obj\Debug\net6.0\scopedcss\projectbundle\BTL_API_VanPhongPham.bundle.scp.css

@@ -18,68 +18,17 @@ namespace BTL_API_VanPhongPham.Controllers
             _clientFactory = clientFactory;
 
         }
-        //public IActionResult Index()
-        //{
-        //    return View("Products");
-        //}
 
         private int pageSize = 6;
-        //public async Task<IActionResult> Index(string? maloai, string? tk,string? tenloai)
-        //{
-        //    List<SanPham> products = new();
-        //    try
-        //    {
-        //        var client = _clientFactory.CreateClient();
-        //        var response = await client.GetAsync("http://127.0.0.1:5000/all");
-        //        var res_loai = await client.GetAsync("http://127.0.0.1:5000/api/sanpham/loai?maloai=" + maloai);
-        //        var res_search = await client.GetAsync("http://127.0.0.1:5000/api/sanpham/search?tentk=" + tk);
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            products = await response.Content.ReadFromJsonAsync<List<SanPham>>();
-
-
-        //        }
-
-        //        if (maloai != null&& res_loai.IsSuccessStatusCode)
-        //        {
-        //            products  = await res_loai.Content.ReadFromJsonAsync<List<SanPham>>();
-        //            ViewBag.maloai = maloai;
-        //            ViewBag.tl = tenloai;
-        //        }
-
-        //        if(tk != null&& res_search.IsSuccessStatusCode)
-        //        {
-        //            products = await res_search.Content.ReadFromJsonAsync<List<SanPham>>();
-        //            ViewBag.TenTK = tk;
-
-        //        }
-
-
-        //        Console.WriteLine("Tổng sản phẩm: " + products.Count);
-        //        if (products.Count() > 0)
-        //        {
-        //            //tinh so trang
-        //                int pageNum = (int)Math.Ceiling(products.Count() / (float)pageSize);
-        //            //luu so trang bang viewbag
-        //            ViewBag.pageNum = pageNum;
-        //            //lay du lieu trang dau
-        //            var page1 = products.Take(pageSize).ToList();
-
-        //            return View("Products",page1); // truyền list vào view
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //    return NotFound();
-        //}
 
         public async Task<IActionResult> Index(string? maloai, string? tk, string? tenloai)
         {
             List<SanPham> products = new();
-            
-                try
+            ViewBag.maloai = maloai;
+            ViewBag.TenTK = tk;
+            ViewBag.tl = tenloai;
+           
+            try
                 {
                     // Tạo query string
                     var queryParams = new Dictionary<string, string?>
@@ -107,10 +56,6 @@ namespace BTL_API_VanPhongPham.Controllers
 
                     }
 
-                    ViewBag.maloai = maloai;
-                    ViewBag.TenTK = tk;
-                    ViewBag.tl = tenloai;
-
                     return View("Products", products);
                 }
             
@@ -121,28 +66,6 @@ namespace BTL_API_VanPhongPham.Controllers
 
             return View("Products", products);
         }
-
-
-
-
-        //public IActionResult Products(string? maloai)
-        //{
-        //    //var listSanPham = db.SanPhams.ToList();
-        //    var listSanPham = (IQueryable<SanPham>)db.SanPhams.Include(m => m.MaLoaiHangNavigation);
-        //    if (maloai != null)
-        //    {
-        //        listSanPham = (IQueryable<SanPham>)db.SanPhams.Where(m => m.MaLoaiHang == maloai).Include(l => l.MaLoaiHangNavigation);
-        //    }
-
-
-        //    //tinh so trang
-        //    int pageNum = (int)Math.Ceiling(listSanPham.Count() / (float)pageSize);
-        //    //luu so trang bang viewbag
-        //    ViewBag.pageNum = pageNum;
-        //    //lay du lieu trang dau
-        //    var page1 = listSanPham.Take(pageSize).ToList();
-
-        //    return View("Products", page1);
 
 
         public async Task<IActionResult> ChiTiet(string masp)
@@ -237,88 +160,6 @@ namespace BTL_API_VanPhongPham.Controllers
 
             return PartialView("PartialSanPham", new List<SanPham>()); // Tránh lỗi view nếu rỗng
         }
-
-        //public async Task<IActionResult> LocSP(string? maloai, string? tentk, int? pageindex, string? loaisx)
-        //{
-        //    //lay toan bo san pham
-        //    List<SanPham> products = new();
-
-        //    //lay so trang , neu null thi gan = 1
-        //    int page = (int)(pageindex == null || pageindex <= 0 ? 1 : pageindex);
-            
-        //    try
-        //    {
-        //        var client = _clientFactory.CreateClient();
-        //        var response = await client.GetAsync("http://127.0.0.1:5000/all");
-        //        //var res_loai = await client.GetAsync("http://127.0.0.1:5000/api/sanpham/loai?maloai=" + maloai);
-        //        var res_tk = await client.GetAsync("http://127.0.0.1:5000/api/sanpham/search?tentk=" + tentk);
-        //        var sxTenAZ = await client.GetAsync("http://127.0.0.1:5000/api/sx/tenAZ");
-        //        var sxTenZA = await client.GetAsync("http://127.0.0.1:5000/api/sx/tenZA");
-        //        var sxGiaGiam = await client.GetAsync("http://127.0.0.1:5000/api/sx/giagiam");
-        //        var sxGiaTang = await client.GetAsync("http://127.0.0.1:5000/api/sx/giatang");
-
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            products = await response.Content.ReadFromJsonAsync<List<SanPham>>();
-        //        }
-
-        //        //neu co ma loai thi loc theo ma loai
-        //        if (maloai != null)
-        //        {
-        //            products = products.Where(x => x.MaLoaiHang == maloai).ToList();
-        //            ViewBag.maloai = maloai;
-        //        }
-
-        //        //neu co tu khoa tim kiem theo ten
-        //        if (tentk != null)
-        //        {
-        //            //tim kiem
-        //            products = await res_tk.Content.ReadFromJsonAsync<List<SanPham>>();
-        //            //string json = await res_tk.Content.ReadAsString
-        //            //luu tu khoa tim kie bang viwbag
-        //            ViewBag.TenTK = tentk;
-        //        }
-
-        //        if(loaisx != null)
-        //        {
-        //            switch(loaisx)
-        //            {
-        //                case "AZ":
-        //                    products = (List<SanPham>?)products.OrderBy(p => p.TenSanPham);
-        //                    break;
-        //                case "ZA":
-        //                    products = (List<SanPham>?)products.OrderByDescending(p => p.TenSanPham);
-        //                    break;
-        //                case "giagiam":
-        //                    products = (List<SanPham>?)products.OrderByDescending(p => p.GiaToiThieu);
-        //                    break;
-        //                case "giatang":
-        //                    products = (List<SanPham>?)products.OrderBy(p => p.GiaToiThieu);
-        //                    break;
-
-        //            }
-        //            ViewBag.loaisx = loaisx;  
-                    
-        //        }
-
-        //        //tinh so trang
-        //        int pageNum = (int)Math.Ceiling(products.Count() / (float)pageSize);
-        //        //luu lai bang viewbag
-        //        ViewBag.pageNum = pageNum;
-        //        ViewBag.pageIndex = page ;
-
-        //        //chọn dữ liệu hiên thi cho trang hien tại
-        //        var ketqua = products.Skip(pageSize * (page - 1))
-        //                     .Take(pageSize);
-
-        //        return PartialView("dsSanPham", ketqua);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //    return NotFound();
-        //}
 
         public async Task<IActionResult> Loc(string? maloai, string? tentk, int? pageindex, string? loaisx)
         {

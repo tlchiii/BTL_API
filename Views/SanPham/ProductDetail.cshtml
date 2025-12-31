@@ -60,12 +60,13 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                                 <div class="p-size">
-                                    <h4>Mã SP: </h4>
+                                    <h4>Mã SP:</h4>
                                     @{
                                         if(Model.Count > 0){
                                             <p id="machitiet">@Model[0].MaChiTietSanPham</p>
                                         }
                                     }
+                                    
                                     
                                 </div>
                                 <div class="price">
@@ -115,7 +116,7 @@
                                 
                                 <div class="action">
                                     <a class="btn" id="addCart"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</a>
-                                    <a class="btn" asp-action="MuaNgay" asp-controller="Home" ><i class="fa fa-shopping-bag"></i>Mua ngay</a>
+                                    <a class="btn" id="muangay"><i class="fa fa-shopping-bag"></i>Mua ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +136,9 @@
                             -->
                             
                             <li class="nav-item">
-                                <a class="nav-link" data-toggle="pill" href="#reviews">Đánh giá (1)</a>
+                                <a id="danhGiaTab" class="nav-link" data-toggle="pill" href="#reviews">Đánh giá</a>
                             </li>
+
                         </ul>
 
                         <div class="tab-content">
@@ -173,21 +175,8 @@
                                                             </ul>
                                                         </div>
 -->
-                            
+
                             <div id="reviews" class="container tab-pane fade">
-                                <div class="reviews-submitted">
-                                    <div class="reviewer">Phasellus Gravida - <span>01 Tháng 1 2020</span></div>
-                                    <div class="ratting">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                    <p>
-                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                                    </p>
-                                </div>
                                 <div class="reviews-submit">
                                     <h4>Gửi đánh giá của bạn:</h4>
                                     <div class="ratting">
@@ -199,19 +188,21 @@
                                     </div>
                                     <div class="row form">
                                         <div class="col-sm-6">
-                                            <input type="text" placeholder="Tên của bạn">
+                                            <input id="tenNguoiDung" type="text" placeholder="Tên của bạn">
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="email" placeholder="Email của bạn">
+                                            <input id="emailNguoiDung" type="email" placeholder="Email của bạn">
                                         </div>
                                         <div class="col-sm-12">
-                                            <textarea placeholder="Nội dung đánh giá"></textarea>
+                                            <textarea id="noiDungBL" placeholder="Nội dung đánh giá"></textarea>
                                         </div>
                                         <div class="col-sm-12">
-                                            <button>Gửi đánh giá</button>
+                                            <button id="btnGuiDanhGia">Gửi đánh giá</button>
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Nơi hiển thị danh sách bình luận -->
+                                <div id="dsBinhLuan" class="mt-4"></div>
                             </div>
                         </div>
                     </div>
@@ -264,6 +255,18 @@
           
             <!-- Side Bar End --> 
 <!-- Product Detail End -->
+<style>
+    .ratting i {
+        font-size: 24px;
+        cursor: pointer;
+        color: #ccc;
+        transition: color 0.2s;
+    }
+
+        .ratting i.active {
+            color: gold;
+        }
+</style>
 
     <script type="text/javascript">
 
@@ -271,9 +274,6 @@
             getSPLQ();
             $('.p-color .btn').first().addClass('active');
 
-            // getSP();
-            // getAnh();
-            // getSPLQ();
         });
 
         let selectedColor = null;
@@ -302,67 +302,13 @@
                      alert("lỗi");
                 },
                 success: function (res) {
-                     alert("ok");
+                     //alert("ok");
                      console.log(res);
                      $("#splq").html(res);
                    
                 }
             });
         }
-
-
-        // function getSPLQ() {
-        //     $.ajax({
-        //         url: 'http:127.0.0.1:5000/api/sanpham/loai?maloai=' + '@ViewBag.maloai',
-        //         method: 'GET',
-        //         error: function () {
-        //             alert("Lỗi khi tải sản phẩm liên quan");
-        //         },
-        //         success: function (res) {
-        //             alert('get splq');
-        //             console.log(res);
-        //             let productListHtml = '';
-        //             if (res.length > 0) {
-        //                 res.forEach(function(product) {
-        //                     productListHtml += `
-        //                         <div class="col-md-3">
-        //                             <div class="product-item">
-        //                                 <div class="product-image">
-        //                                     <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">
-        //                                         <img src="../Image/SanPham/${product.HinhAnhSanPham.trim()}" alt="Hình sản phẩm">
-        //                                     </a>
-        //                                     <div class="product-action">
-        //                                         <a href="#" class="addCart" data-id="${product.MaSanPham}"><i class="fa fa-cart-plus"></i></a>
-        //                                         <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}"><i class="fa fa-search"></i></a>
-        //                                     </div>
-        //                                 </div>
-        //                                 <div class="product-title">
-        //                                     <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}">${product.TenSanPham}</a>
-        //                                     <div class="ratting">
-        //                                         <i class="fa fa-star"></i>
-        //                                         <i class="fa fa-star"></i>
-        //                                         <i class="fa fa-star"></i>
-        //                                         <i class="fa fa-star"></i>
-        //                                         <i class="fa fa-star"></i>
-        //                                     </div>
-        //                                 </div>
-        //                                 <div class="product-price">
-        //                                     <h3>${formatNumber(product.GiaToiThieu)}đ</h3>
-        //                                     <p style="text-decoration: line-through; float: right;">${formatNumber(product.GiaToiDa)}đ</p>
-        //                                 </div>
-        //                             </div>
-        //                         </div>
-        //                     `;
-        //                     $('#splq').append(productListHtml);
-        //                 });
-
-        //                 $('#splq').html(productListHtml); Cập nhật toàn bộ sau khi duyệt xong
-        //             } else {
-        //                 $('#splq').html('<p>Không có sản phẩm liên quan.</p>');
-        //             }
-        //         }
-        //     });
-        // }
 
 
         function getAnh(){
@@ -375,7 +321,7 @@
                 },
                 
                 success: function (res) {
-                     alert("anh");
+                     //alert("anh");
                      console.log(res);
                     var $list_big = $('#anhsp_big');
                     var $list_small = $('#anhsp_small');
@@ -393,10 +339,6 @@
                     `;
 
                    });
-
-                   // $list_big.append(html_big);
-                   // $list_small.append(html_small);
-
                    $list_big.html(html_big);
                    $list_small.html(html_small);
                 }
@@ -412,7 +354,7 @@
                      alert("lỗi");
                 },
                 success: function (res) {
-                     alert("ok");
+                     //alert("ok");
                      console.log(res);
                      var $list = $('#category-list');
                      //$list.empty(); Xóa dữ liệu cũ (nếu có)
@@ -436,59 +378,12 @@
             return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
         }
 
-        function getSP(){
-            $.ajax({
-                url: 'http://127.0.0.1:5000/sp/search?masp=' + '@ViewBag.masp',
-                method: 'GET',
-                dataType: 'json',
-                error: function (res) {
-                     alert("lỗi");
-                },
-                success: function (res) {
-                     alert("get sp");
-                     console.log(res[0]);
-                     $("#TenSP").text(res[0].TenSanPham);
-                     $("#giatd").text(formatNumber(res[0].GiaToiDa));
-                     $("#giatt").text(formatNumber(res[0].GiaToiThieu));
-                     $("#chitiet").text(res[0].ChiTiet);
-                },
-                fail: function (response) { }
-                });
-        }
-
-        function getChiTiet(){
-            $.ajax({
-                url: 'http://127.0.0.1:5000/DanhMuc',
-                method: 'GET',
-                dataType: 'json',
-                error: function (res) {
-                     alert("lỗi");
-                },
-                success: function (res) {
-                     alert("ok");
-                     console.log(res);
-                     var $list = $('#category-list');
-                     //$list.empty(); Xóa dữ liệu cũ (nếu có)
-
-                   $.each(res, function (index,item) {
-                    var html = `
-                         <li class="nav-item" id=${item.MaLoaiHang}>
-                                <a class="nav-link" style="cursor: pointer"><i class="fa "></i>${item.TenLoaiHang}</a>
-                         </li>
-                        `;
-
-                    $list.append(html);
-                });
-                },
-                fail: function (response) { }
-                });
-        }
+     
 
       $('body').on('click','a#addCart',function(){
         addCart();
         
-        // setCookie();
-    })
+       });
 
     function getCart(){
         $.ajax({
@@ -501,7 +396,7 @@
                      alert("lỗi");
              },
             success: function (data){
-                alert("get cart");
+                //alert("get cart");
                 console.log(data);
                 var carts  = data.cart_items;
                var $list = $('#cartBody');
@@ -521,7 +416,7 @@
                    alert("lỗi");
              },
             success: function (data){
-                alert("so luong cart");
+                //alert("so luong cart");
                 console.log(data.soluong);
                 $('#cartSL').text(data.soluong)
 
@@ -529,6 +424,7 @@
         });
     }
 
+    //thêm vào giỏ hàng 
     function addCart(){
         $.ajax({
             url: 'http://127.0.0.1:5000/add-to-cart',
@@ -546,30 +442,181 @@
                    alert("lỗi");
              },
             success: function (data){
-                alert("add cart");
+                alert("Thành công");
                 console.log(data);
                 slGioHang();
             }
         });
     }
-    function setCookie(){
-        $.ajax({
-            url: 'http://127.0.0.1:5000/set_cookie',
-            method: 'GET',
-            xhrFields: {
-        withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
-    },
-            error: function (res) {
-                     alert("lỗi");
-             },
-            success: function (data){
-                alert("set cookie");
-                console.log(data);
+    
 
+     //mua ngay 
+    $('body').on('click', 'a#muangay', function () {
+         var maChiTiet = document.getElementById("machitiet").innerText;
+         var soLuong = document.getElementById("SL").value;
+
+         window.location.href = `/Home/MuaNgay?machitietsp=${maChiTiet}&sl=${soLuong}`;
+     });
+
+    //phần đánh giá 
+    //  let currentRating = 0;
+    // const stars = document.querySelectorAll('.reviews-submit .ratting i');
+    // stars.forEach(star => {
+    //     star.addEventListener('click', () => {
+    //         const rating = star.getAttribute('data-value');
+
+    //         Nếu người dùng nhấn vào sao hiện tại -> bỏ chọn
+    //        if (rating === currentRating) {
+    //            currentRating = 0;
+    //        } else {
+    //           currentRating = rating;
+    //        }
+
+
+    //         stars.forEach((s, i) => {
+    //             if (i < currentRating) {
+    //                 s.classList.remove('far');
+    //                 s.classList.add('fa');
+    //             } else {
+    //                 s.classList.remove('fa');
+    //                 s.classList.add('far');
+    //             }
+    //         });
+    //         console.log("Bạn đã đánh giá:", rating);
+    //     });
+    // });
+
+    //thuong 
+        $(document).ready(function () {
+        if ($(".reviews-submit .ratting").length > 0) {
+            let selectedRating = 0;
+
+            // Hover sao
+            $(".reviews-submit .ratting i").on("mouseenter", function () {
+                let index = $(this).index();
+                updateStars(index + 1);
+            });
+
+            $(".reviews-submit .ratting i").on("mouseleave", function () {
+                updateStars(selectedRating);
+            });
+
+            // Click chọn sao
+            $(".reviews-submit .ratting i").on("click", function () {
+                selectedRating = $(this).index() + 1;
+                updateStars(selectedRating);
+                console.log("Bạn đã đánh giá: " + selectedRating + " sao");
+            });
+
+            function updateStars(rating) {
+                $(".reviews-submit .ratting i").each(function (index) {
+                    if (index < rating) {
+                        $(this)
+                            .removeClass("far fa-star")
+                            .addClass("fas fa-star active");
+                    } else {
+                        $(this)
+                            .removeClass("fas fa-star active")
+                            .addClass("far fa-star");
+                    }
+                });
+            }
+
+            // Gửi đánh giá
+            $('#btnGuiDanhGia').click(function () {
+                const ten = $('#tenNguoiDung').val().trim();
+                const email = $('#emailNguoiDung').val().trim();
+                const noidung = $('#noiDungBL').val().trim();
+                const masp = '@ViewBag.masp';
+
+                if (!ten || !email || !noidung || selectedRating === 0) {
+                    alert("Vui lòng điền đầy đủ thông tin và chọn số sao!");
+                    return;
+                }
+
+                $.ajax({
+                    url: 'http://127.0.0.1:5000/api/danhgia',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        MaSanPham: masp,
+                        TenNguoiDung: ten,
+                        Email: email,
+                        SoSao: selectedRating,
+                        NoiDung: noidung
+                    }),
+                    success: function () {
+                        alert("Gửi đánh giá thành công!");
+                        $('#noiDungBL').val('');
+                        selectedRating = 0;
+                        updateStars(0);
+                        loadBinhLuan(); // Refresh danh sách
+                        capNhatSoLuongDanhGia(); // Cập nhật số lượng đánh giá
+                    },
+                    error: function (err) {
+                        alert("Lỗi khi gửi đánh giá!");
+                        console.log(err);
+                    }
+                });
+            });
+
+            // Load danh sách bình luận
+            function loadBinhLuan() {
+                const masp = '@ViewBag.masp';
+
+                $.ajax({
+                    url: `http://127.0.0.1:5000/api/danhgia/${masp}`,
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        let html = '';
+                        if (data.length > 0) {
+                            data.forEach(function (bl) {
+                                const starHTML = '<i class="fas fa-star text-warning me-1"></i>'.repeat(bl.SoSao || 0);
+                                html += `
+                                    <div class="border p-2 mb-2 rounded bg-light">
+                                        <strong>${bl.TenNguoiDung || 'Người dùng'}:</strong>
+                                        <div class="mb-1">${starHTML}</div>
+                                        <p>${bl.NoiDung}</p>
+                                        <small class="text-muted">${bl.ThoiGian}</small>
+                                    </div>
+                                `;
+                            });
+                        } else {
+                            html = '<p>Chưa có đánh giá nào.</p>';
+                        }
+                        $('#dsBinhLuan').html(html);
+                    },
+                    error: function (err) {
+                        console.log("Lỗi khi tải danh sách bình luận", err);
+                    }
+                });
+            }
+
+            // Hàm cập nhật số lượng đánh giá
+             function capNhatSoLuongDanhGia() {
+                const masp = '@ViewBag.masp';
+                    $.ajax({
+                        url: 'http://127.0.0.1:5000/api/danhgia/soluong/SP1001',
+                        method: 'GET',
+                        success: function(response) {
+                            console.log("Số lượng đánh giá:", response.soLuong);
+                            // xử lý response ở đây
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Lỗi khi lấy số lượng đánh giá:", error);
+                        }
+                    });
 
             }
-        });
-    }
+
+
+            // Tải bình luận và số lượng khi trang load
+            loadBinhLuan();
+            capNhatSoLuongDanhGia();
+        }
+    });
+
     </script>
 
 

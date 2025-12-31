@@ -1,0 +1,401 @@
+﻿@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-wrap">
+    <div class="container-fluid">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="SanPham">Sản phẩm</a></li>
+            <li class="breadcrumb-item active">Thanh toán</li>
+        </ul>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+<!-- Checkout Start -->
+<div class="checkout">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <div class="checkout-inner">
+                    <div class="billing-address">
+                        <div id="thongbao"></div>
+                        <form id="order-form">
+                            <h2>Địa chỉ thanh toán</h2>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Họ và tên</label>
+                                    <input id="hovaten" class="form-control" type="text" placeholder="Họ và tên">
+                                </div>
+                               @*  <div class="col-md-6">
+                                    <label>Tên</label>
+                                    <input id="ten"  class="form-control" type="text" placeholder="Tên">
+                                </div> *@
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                    <input id="email"  class="form-control" type="email" placeholder="Email">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Số điện thoại</label>
+                                    <input id="sdt" class="form-control" type="tel" placeholder="Số điện thoại">
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Địa chỉ</label>
+                                    <input id ="diachi" class="form-control" type="text" placeholder="Địa chỉ">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Tỉnh</label>
+                                    <select class="custom-select" id="tinh">
+                                        <option selected>Hà Nội</option>
+                                        <option>Bắc Ninh</option>
+                                        <option>Bắc Giang</option>
+                                        <option>Hà Nam</option>
+                                        <option>Vĩnh Phúc</option>
+                                        <option>Thái Bình</option>
+                                        <option>Quảng Ninh</option>
+                                        <option>Hải Phòng</option>
+                                    </select>
+                                </div>
+                                @* <div class="col-md-6">
+                                <label>Tỉnh</label>
+                                <input class="form-control" type="text" placeholder="Tỉnh">
+                            </div> *@
+                                <div class="col-md-6">
+                                    <label>Huyện/Quận</label>
+                                    <input id="huyen" class="form-control" type="text" placeholder="Huyện/Quận">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Xã/Phường</label>
+                                    <input id="xa"  class="form-control" type="text" placeholder="Xã Phường">
+                                </div>
+                            </div>
+                            <div class="checkout-payment">
+                                <div class="payment-methods">
+                                    <h1>Phương thức thanh toán</h1>
+
+                                    <div class="payment-method">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" id="payment-4" data-pttt="1" name="payment">
+                                            <label class="custom-control-label" for="payment-4">Chuyển khoản ngân hàng</label>
+                                        </div>
+                                    </div>
+                                    <div class="payment-method">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" id="payment-5" data-pttt="2" name="payment">
+                                            <label class="custom-control-label" for="payment-5">Thanh toán khi nhận hàng</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-btn">
+                                    <button>Đặt hàng</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+
+                    <div class="shipping-address">
+                        <h2>Địa chỉ giao hàng</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Họ</label>
+                                <input class="form-control" type="text" placeholder="Họ">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Tên</label>
+                                <input class="form-control" type="text" placeholder="Tên">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email</label>
+                                <input class="form-control" type="text" placeholder="Email">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Số điện thoại</label>
+                                <input class="form-control" type="text" placeholder="Số điện thoại">
+                            </div>
+                            <div class="col-md-12">
+                                <label>Địa chỉ</label>
+                                <input class="form-control" type="text" placeholder="Địa chỉ">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Tỉnh</label>
+                                <select class="custom-select">
+                                    <option selected>Hà Nội</option>
+                                    <option>Bắc Ninh</option>
+                                    <option>Bắc Giang</option>
+                                    <option>Hà Nam</option>
+                                </select>
+                            </div>
+                            @* <div class="col-md-6"> *@
+                            @*     <label>Tỉnh</label> *@
+                            @*     <input class="form-control" type="text" placeholder="Thành phố"> *@
+                            @* </div> *@
+                            <div class="col-md-6">
+                                <label>Huyện</label>
+                                <input class="form-control" type="text" placeholder="Bang/Tỉnh">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Xã</label>
+                                <input class="form-control" type="text" placeholder="Bang/Tỉnh">
+                            </div>
+                            @* <div class="col-md-6">
+                                <label>Mã bưu điện</label>
+                                <input class="form-control" type="text" placeholder="Mã bưu điện">
+                            </div> *@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-sm-12">       
+                <div class="checkout-inner">
+                    <div class="checkout-summary">
+                        <!-- bang san pham-->
+                        <div class="cart-page" style="margin-top : 0;">
+                            <div class="cart-page-inner-checkout">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="thead-dark">
+                                            @* <tr> *@
+                                            @*     <th>Sản phẩm</th> *@
+                                            @*     <th>Màu</th> *@
+                                            @*     <th>Số lượng</th> *@
+                                            @*     <th>Tổng</th> *@
+                                            @* </tr> *@
+                                        </thead>
+                                        <tbody class="align-middle" id="cartBody">
+                                           @*  <tr>
+                                                <td>
+                                                    <div class="img">
+                                                        <a href="#"><img src="~/Image/SanPham/bocsach1.jpg" alt="Hình ảnh"></a>
+                                                        <p>Tên sản phẩm</p>
+                                                    </div>
+                                                </td>
+                                                <td>Đỏ</td>
+                                                <td>1</td>
+                                                <td>$99</td>
+                                            </tr> *@
+                                            <!-- Các sản phẩm khác tương tự -->
+                                            <!-- Bạn có thể giữ nguyên các dòng lặp và chỉ cần đổi văn bản hiển thị -->
+                                            <!-- Ở đây sẽ lặp lại tương tự các phần trên với hình ảnh và tên sản phẩm khác -->
+                                            <!-- ... thêm sản phẩm khác -->
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        @* <h1>Tổng giỏ hàng</h1>
+                        <p>Tên sản phẩm<span>$99</span></p> *@
+                        <p class="sub-total">Tạm tính<span>$99</span></p>
+                        <p class="ship-cost">Phí vận chuyển<span>$1</span></p>
+                        <h2 id="Total">Tổng cộng<span>0</span></h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Checkout End -->
+<script type="text/javascript">
+    $(document).ready(function(){
+            get_GioHang();
+
+
+        });
+
+     function formatNumber(num) {
+                if (!num) return "";
+                return Number(num).toLocaleString('vi-VN');  // Ví dụ: 1000000 => "1.000.000"
+            }
+
+     function slGioHang(){
+             $.ajax({
+                url: 'http://127.0.0.1:5000/cartSL',
+                method: 'GET',
+                dataType: 'json',
+                xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+                 },
+                error: function (res) {
+                       alert("lỗi");
+                 },
+                success: function (data){
+                    //alert("so luong cart");
+                    console.log(data.soluong);
+                    $('#cartSL').text(data.soluong);
+                    if(parseInt(data.soluong) > 0){
+                         var html =`<button id="thanhtoan">Thanh toán</button>`;
+                        $('div.cart-btn').empty();
+                        $('div.cart-btn').append(html);
+
+                        console.log("Thẻ:", $('div.cart-btn'));
+                    }
+
+                }
+             });
+      } 
+
+      let tongtien ;
+      function get_GioHang(){
+              $.ajax({
+                url: 'http://127.0.0.1:5000/cart',
+                method: 'GET',
+                dataType: 'json',
+                 xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+                 },
+                error: function (res) {
+                         alert("lỗi");
+                 },
+                success: function (data){
+                    // alert("get thanh toan");
+                    // console.log(data);
+                   var $list = $('#cartBody');
+                   var item = '';
+                   tongtien = formatNumber(data.tong);
+                  $('#Total span').text(formatNumber(data.tong));
+                   console.log(parseInt(data.cart.length));
+                   if(parseInt(data.cart.length) >= 1){
+                      for(var i =0; i< data.cart.length; i++)
+                      {
+                          item += `
+                               <tr machitiet="${data.cart[i].MaChiTietSanPham}">
+                                    <td>
+                                        <div class="img">
+                                            <a href="#"><img src="../Image/SanPham/${data.cart[i].HinhAnhSanPham}" alt="Hình ảnh"></a>
+                                            <p>${data.cart[i].TenSanPham}</p>
+                                        </div>
+                                    </td>
+                                    <td>${data.cart[i].TenMau}</td>
+                                    <td>${data.cart[i].sl}</td>
+                                    <td>${formatNumber(data.cart[i].thanhtien)}đ</td>
+                                </tr>
+                          `;
+
+                      }
+
+
+                   }
+                       $list.html(item);
+                       console.log("HTML đã render xong!");
+
+
+                }
+            });
+
+      }
+
+      //validate thanh toans
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Lấy dữ liệu
+        const hovaten = document.getElementById('hovaten').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const sdt = document.getElementById('sdt').value.trim();
+        const diachi = document.getElementById('diachi').value.trim();
+        const tinh = document.getElementById('tinh').value.trim();
+        const huyen= document.getElementById('huyen').value.trim();
+        const xa = document.getElementById('xa').value.trim();
+        const pttt = document.querySelector('input[name="payment"]:checked');
+
+
+       const isValidPhone = /^0\d{9,10}$/.test(sdt);
+
+       if (!isValidPhone) {
+            alert("Số điện thoại không hợp lệ!", "error");
+            return;
+       }
+
+        // Kiểm tra đơn giản
+        if (!hovaten || !email || !sdt || !diachi || !tinh || !huyen || !xa || !pttt) {
+            showMessage("Vui lòng điền đầy đủ thông tin", "error");
+            return;
+        }
+        
+        const data = JSON.stringify(
+            {
+            tongtien : tongtien,
+            hovaten: hovaten,
+            email: email,
+            sdt: sdt,
+            dcct: diachi, //dia chi cu the
+            tinh: tinh,
+            huyen: huyen,
+            xa: xa,
+            pttt: pttt.dataset.pttt
+        }) ;
+       themhoadon(data);
+       
+    });
+
+
+    function reset(){
+        $('#hovaten').val("");
+        $('#email').val("");
+        $('#sdt').val("");
+        $('#diachi').val("");
+        $('#tinh').val("");
+        $('#huyen').val("");
+        $('#xa').val("");
+        $('input[name="payment"]').prop('checked', false);
+        $('#Total span').text("");
+        $('#cartBody').empty();
+    }
+
+    function clear_giohang(){
+        $.ajax({
+                url: 'http://127.0.0.1:5000/clear_cart',
+                method: 'POST',
+                dataType: 'json',
+                xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+                 },
+                error: function (res) {
+                         alert("lỗi");
+                 },
+                success: function (data){
+                    //console.log('clear gio hang!');
+                }
+        });
+     }
+
+      function themhoadon(data){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/them_hoadon',
+            method: 'PUT',
+            contentType: 'application/json',
+            dataType: 'json',
+            xhrFields: {
+                     withCredentials: true  // Cho phép gửi và nhận cookie
+            },
+            data: data,
+            error: function (res) {
+                       //alert("lỗi");
+             },
+             success: function (data){
+                 alert('Thành công');
+                 console.log(data);
+                 // get_GioHang();
+                 slGioHang();
+                 // clear_giohang();
+                 reset();
+                 //location.reload();
+             }
+
+       });
+    }
+
+    // Hàm hiển thị thông báo
+    function showMessage(msg, type) {
+        const box = document.getElementById('thongbao');
+        box.textContent = msg;
+        box.style.color = type === "success" ? "green" : "red";
+        box.style.marginTop = "10px";
+    }
+
+</script>

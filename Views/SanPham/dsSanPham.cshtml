@@ -60,7 +60,7 @@
 
                                 @if (startPage > 1)
                                 {
-                                     <li class="page-item" page='1'><a class="page-link page-btn" href="#" data-page="1" @(ViewBag.maloai != null ? $"maloai = '{ViewBag.maloai}'" : "")
+                                     <li class="page-item" page='1'><a class="page-link page-btn" href="#" data-page="1" @(ViewBag.maloai != null ? $"maloai = {ViewBag.maloai}" : "")
                                      @(ViewBag.TenTK != null ? $"tentk = {ViewBag.TenTK}" : "") @(ViewBag.loaisx != null ? $"loaisx = {ViewBag.loaisx}" : "") >1</a>
                                      </li>
                                     <li class="page-item disabled"><span class="page-link">...</span></li>
@@ -79,7 +79,7 @@
                                 {
                                     <li class="page-item disabled" ><span class="page-link">...</span></li>
                                     <li class="page-item" >
-                                         <a class="page-link page-btn" href="#" data-page="@totalPages" @(ViewBag.maloai != null ? $"maloai = '{ViewBag.maloai}'" : "")
+                                         <a class="page-link page-btn" href="#" data-page="@totalPages" @(ViewBag.maloai != null ? $"maloai = {ViewBag.maloai}" : "")
                                          @(ViewBag.TenTK != null ? $"tentk = {ViewBag.TenTK}" : "") @(ViewBag.loaisx != null ? $"loaisx = {ViewBag.loaisx}" : "") >@totalPages</a>
                                     </li>
                                 }

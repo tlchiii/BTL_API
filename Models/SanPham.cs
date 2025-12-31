@@ -16,16 +16,5 @@
 
         }
 
-        public SanPham(string maSanPham, string? tenSanPham, decimal? giaToiThieu, decimal? giaToiDa, int? soLuongTon, string? hinhAnhSanPham, string? chiTiet, string maLoaiHang)
-        {
-            MaSanPham = maSanPham;
-            TenSanPham = tenSanPham;
-            GiaToiThieu = giaToiThieu;
-            GiaToiDa = giaToiDa;
-            SoLuongTon = soLuongTon;
-            HinhAnhSanPham = hinhAnhSanPham;
-            ChiTiet = chiTiet;
-            MaLoaiHang = maLoaiHang;
-        }
     }
 }

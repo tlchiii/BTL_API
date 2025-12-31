@@ -757,6 +757,14 @@
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_1.png",
+      "PackagePath": "staticwebassets\\img\\logo_1.png"
+    },
+    {
+      "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\logo_2.png",
+      "PackagePath": "staticwebassets\\img\\logo_2.png"
+    },
+    {
       "Id": "C:\\WEB_BTL\\BTL_API_VanPhongPham\\wwwroot\\img\\norton.svg",
       "PackagePath": "staticwebassets\\img\\norton.svg"
     },

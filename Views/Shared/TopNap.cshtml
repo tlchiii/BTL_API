@@ -7,63 +7,57 @@
         <a href="product-detail.html" class="nav-item nav-link">Product Detail</a>
     -->
     <!-- Nav Bar Start -->
+    <!--
+
 <div class="top-0 fixed-top nav " style="position: fixed; ">
     <div class="container-fluid">
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                <a href="#" class="navbar-brand">MENU</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <!--
-                        <a href="~/Home" class="nav-item nav-link active">Home</a>
-                         <a href="~/Home/Products" class="nav-item nav-link">Products</a>
-                        -->
-                        @* <a href="product-detail.html" class="nav-item nav-link">Product Detail</a> *@
-                        <a asp-action="Index" asp-controller="Home" class="nav-item nav-link">Trang chủ</a>
-                         <a asp-action="Index" asp-controller="SanPham" class="nav-item nav-link">Danh mục</a>
-                        <a asp-action="ChiTiet" asp-controller="Home"  class="nav-item nav-link">Product Detail</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto">
 
-                        <a asp-action="Cart" asp-controller="Home" class="nav-item nav-link">Cart</a>
-                         <a asp-action="CheckOut" asp-controller="Home" class="nav-item nav-link">Checkout</a>
-                        <a href="#" class="nav-item nav-link">My Account</a>
-                         @* <div class="nav-item dropdown">
-                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More Pages</a>
-                             <div class="dropdown-menu">
-                                 <a href="wishlist.html" class="dropdown-item">Wishlist</a>
-                                 <a href="login.html" class="dropdown-item">Login & Register</a>
-                                 <a href="contact.html" class="dropdown-item">Contact Us</a>
-                             </div>
-                         </div> *@
-                    </div>
-                    <div class="navbar-nav ml-auto">
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
-                            <div class="dropdown-menu">
-                                <a asp-action="Login" asp-controller="Access" class="dropdown-item">Login</a>
-                                <a asp-action="" asp-controller="Access" class="dropdown-item">Register</a>
-                                <a asp-action="Logout" asp-controller="Access" class="dropdown-item">Logout</a>
-                                <a asp-action="Index" asp-controller="admin" class="dropdown-item">Admin</a>
-                            </div>
-                        </div>
-                    </div>
+                    <a asp-action="Index" asp-controller="Home" class="nav-item nav-link">Trang chủ</a>
+                    <a asp-action="Index" asp-controller="SanPham" class="nav-item nav-link">Danh mục</a>
+                    <a asp-action="ChiTiet" asp-controller="SanPham" class="nav-item nav-link">Product Detail</a>
+
+                    <a asp-action="Cart" asp-controller="Home" class="nav-item nav-link">Cart</a>
+                    <a asp-action="ThanhToan" asp-controller="Cart" class="nav-item nav-link">Checkout</a>
+
+
                 </div>
-            </nav>
+    
+<div class="navbar-nav ml-auto">
+    <div class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tài Khoản</a>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Đăng nhập</a>
+            <a href="#" class="dropdown-item">Đăng ký</a>
+
+        </div>
     </div>
 </div>
+            </div>
+        </nav>
+    </div>
+</div>
+    -->
+
 
 
     <!-- Nav Bar End -->
 <!-- Bottom Bar Start -->
-<div class="bottom-bar" style="margin-top: 37px">
+@* <div class="bottom-bar top-0 fixed-top " style="margin-top: 37px"> *@
+<div class="bottom-bar">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-md-3">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="~/img/logo.png" alt="Logo">
+                        <img src="~/img/logo_2.png" alt="Logo">
                     </a>
                 </div>
             </div>
@@ -81,7 +75,7 @@
                 </form>
 
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="user">
                     <!--
                          <a href="wishlist.html" class="btn wishlist">
@@ -97,7 +91,20 @@
                         
                     @* </a> *@
                 </div>
+                
             </div>
+            <div class="col-md-1">
+                <div class="navbar-nav ml-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tài Khoản</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Đăng nhập</a>
+                            <a href="#" class="dropdown-item">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -105,10 +112,10 @@
 
 <script type="text/javascript">
     $(document).ready( function(){
-        slHioHang();
+        slGioHang();
     });
     
-    function slHioHang(){
+    function slGioHang(){
         $.ajax({
             url: 'http://127.0.0.1:5000/cartSL',
             method: 'GET',
@@ -120,9 +127,16 @@
                    alert("lỗi");
              },
             success: function (data){
-                alert("so luong cart");
+                //alert("so luong cart");
                 console.log(data.soluong);
-                $('#cartSL').text(data.soluong)
+                $('#cartSL').text(data.soluong);
+                if(parseInt(data.soluong) > 0){
+                         var html =`<button id="thanhtoan" asp-action="ThanhToan" asp-controller="Cart" >Thanh toán</button>`;
+                        $('div.cart-btn').empty();
+                        $('div.cart-btn').append(html);
+
+                        console.log("Thẻ:", $('div.cart-btn'));
+                    }
 
             }
         });

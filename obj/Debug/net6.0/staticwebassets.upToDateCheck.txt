@@ -186,6 +186,8 @@ wwwroot\img\category-7.jpg
 wwwroot\img\category-8.jpg
 wwwroot\img\godaddy.svg
 wwwroot\img\logo.png
+wwwroot\img\logo_1.png
+wwwroot\img\logo_2.png
 wwwroot\img\norton.svg
 wwwroot\img\payment-method.png
 wwwroot\img\product-1.jpg

@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
+    ViewBag.ShowChatbot = true;
 }
 
 @* <h1>Day la RenderBody</h1> *@
@@ -341,11 +342,11 @@
                             <div class="product-action">
                                 @* <a href="#"><i class="fa fa-cart-plus"></i></a> *@
                                 @* <a href="#"><i class="fa fa-heart"></i></a> *@
-                                <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham"><i class="fa fa-search"></i></a>
+                                <a asp-action="ChiTiet" asp-controller="SanPham" asp-route-masp="@item.MaSanPham"><i class="fa fa-search"></i></a>
                             </div>
                         </div>
                         <div class="product-title">
-                            <a asp-action="ProductDetail" asp-controller="Home" asp-route-masp="@item.MaSanPham">@item.TenSanPham</a>
+                            <a asp-action="ChiTiet" asp-controller="SanPham" asp-route-masp="@item.MaSanPham">@item.TenSanPham</a>
                             <div class="ratting">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -495,7 +496,7 @@
                     alert("Lỗi khi tải sản phẩm ");
                 },
                 success: function (res) {
-                    alert('get splq');
+                    //alert('get splq');
                     console.log(res);
                     let productListHtml = '';
                     if (res.length > 0) {
@@ -508,7 +509,6 @@
                                                 <img src="../Image/SanPham/${product.HinhAnhSanPham.trim()}" alt="Hình sản phẩm">
                                             </a>
                                             <div class="product-action">
-                                                <a href="#" class="addCart" data-id="${product.MaSanPham}"><i class="fa fa-cart-plus"></i></a>
                                                 <a href="/SanPham/ChiTiet?masp=${product.MaSanPham}"><i class="fa fa-search"></i></a>
                                             </div>
                                         </div>
@@ -586,24 +586,7 @@
                 }
             });
         }
-        function setCookie(){
-            $.ajax({
-                url: 'http://127.0.0.1:5000/set_cookie',
-                method: 'GET',
-                xhrFields: {
-            withCredentials: true  // 🟢 Cho phép gửi và nhận cookie
-        },
-                error: function (res) {
-                         alert("lỗi");
-                 },
-                success: function (data){
-                    alert("set cookie");
-                    console.log(data);
-
-
-                }
-            });
-        }
+        
 
     </script>
 }

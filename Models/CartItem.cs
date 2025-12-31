@@ -9,10 +9,11 @@
         public string? HinhAnhSanPham { get; set; }
         public string TenMau { get; set; } 
         public int SoLuong { get; set; }
-        
+        public double? ThanhTien { get; set; }
+
         public CartItem() { }
 
-         public CartItem(string maChiTietSanPham, string? tenSanPham, double? donGiaBan, string? hinhAnhSanPham, string tenMau, int soLuong)
+         public CartItem(string maChiTietSanPham, string? tenSanPham, double? donGiaBan, string? hinhAnhSanPham, string tenMau, int soLuong, double thanhtien)
         {
             MaChiTietSanPham = maChiTietSanPham;
             TenSanPham = tenSanPham;
@@ -20,6 +21,7 @@
             HinhAnhSanPham = hinhAnhSanPham;
             TenMau = tenMau;
             SoLuong = soLuong;
+            ThanhTien = thanhtien;
         }
     }
 }

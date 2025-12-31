@@ -57,15 +57,15 @@
             <div class="col-md-6">
                 <div class="payment-method">
                     <h2>Chúng Tôi Chấp Nhận:</h2>
-                    <img src="img/payment-method.png" alt="Phương thức thanh toán" />
+                    <img src="~/img//payment-method.png" alt="Phương thức thanh toán" />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="payment-security">
                     <h2>Bảo Mật Bởi:</h2>
-                    <img src="img/godaddy.svg" alt="Bảo mật thanh toán" />
-                    <img src="img/norton.svg" alt="Bảo mật thanh toán" />
-                    <img src="img/ssl.svg" alt="Bảo mật thanh toán" />
+                    <img src="~/img/godaddy.svg" alt="Bảo mật thanh toán" />
+                    <img src="~/img/norton.svg" alt="Bảo mật thanh toán" />
+                    <img src="~/img/ssl.svg" alt="Bảo mật thanh toán" />
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
 <!-- Kết thúc Footer -->
 
 <!-- Bắt đầu Footer dưới -->
-<div class="footer-bottom">
+@* <div class="footer-bottom">
     <div class="container">
         <div class="row">
             <div class="col-md-6 copyright">
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> *@
     <!-- Footer Bottom End -->
 <script>
          mapboxgl.accessToken ='pk.eyJ1Ijoibmd1eWVudGh1aHVvbmcxOTg3IiwiYSI6ImNrb2Y4dXNlNTBqcmQzMXRyZXA3Yng2NDUifQ.VXut_atNnNAiiw5pi5PwDg';
@@ -103,6 +103,11 @@
             anchor: 'bottom'
          }).setLngLat([105.811,21.02])
     .addTo(map);
+
+     map.addControl(new mapboxgl.NavigationControl({
+                  ShowCompass: true,
+                  SHowZoom : true,
+        }));
 
      map.on('load', function () {
         map.setLayoutProperty('country-label', 'text-field', ['get', 'name_vi']);

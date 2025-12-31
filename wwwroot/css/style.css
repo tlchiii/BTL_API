@@ -37,6 +37,129 @@ h2 {
     }
 }
 
+/******** Ratting  */
+
+
+/*****     CHAT BOT **/
+/* .chatbox, .chat-toggle-button, .bot-message, .user-message, .chat-footer, .chat-body, .chat-header, .bot-avatar, .option-buttons button { */
+/*     all: unset; */
+/* } */
+.chatbox {
+    width: 350px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 1002;
+}
+
+.chat-header {
+    background: #d32f2f;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .chat-header span {
+        cursor: pointer;
+    }
+
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.chat-footer {
+    display: flex;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+    .chat-footer input {
+        flex: 1;
+        border: none;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .chat-footer button {
+        background: #d32f2f;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+
+.message {
+    margin: 10px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bot-message {
+    background: #e0f2f1;
+    color: #004d40;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.user-message {
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-left: auto;
+}
+
+.bot-avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.option-buttons button {
+    margin: 5px 5px 0 0;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background: #f5f5f5;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.chat-toggle-button {
+    position: fixed;
+    bottom: 100px;
+    right: 9px;
+    width: 60px;
+    height: 60px;
+    background: #d32f2f;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 999;
+}
 
 /**********************************/
 /******** Back to Top CSS *********/
@@ -307,10 +430,33 @@ h2 {
 /**********************************/
 /********* Bottom Bar CSS *********/
 /**********************************/
-.bottom-bar {
+/*.bottom-bar {
     padding: 15px 0;
     background: #ffffff;
     margin-bottom: 30px;
+}*/
+
+/*.bottom-bar {
+    padding: 10px 0;
+    background: #dddddd;
+    width: 100%;
+    margin-bottom: 30px;
+    position: sticky;*/
+/*    position: fixed;*/
+    /*top: 0;
+    left: 0;
+    z-index: 1001;
+}*/
+
+.bottom-bar {
+    padding: 10px 0;
+    background: #dddddd;
+    width: 100%;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1001;
 }
 
 .bottom-bar .logo {
@@ -1277,14 +1423,18 @@ h2 {
     font-weight: 400;
 }
 
-.product-detail .tab-content .ratting {
-    color: #FF6F61;
-    margin-bottom: 15px;
-}
+/*ratting phần đánh giá */
+    .product-detail .tab-content .ratting {
+        color: #FF6F61;
+        margin-bottom: 15px;
+    }
 
 .product-detail .tab-content .reviews-submit .ratting {
     font-size: 24px;
 }
+
+/*tự thêm*/
+
 
 .product-detail .tab-content .form input {
     width: 100%;
@@ -1489,6 +1639,12 @@ h2 {
     background: #ffffff;
 }
 
+    .cart-page .cart-page-inner-checkout {
+        /*        padding: 30px;*/
+        /*        margin-bottom: 30px;*/
+        background: #f3f6ff;
+    }
+
 .cart-page .table {
     width: 100%;
     text-align: center;
@@ -1637,7 +1793,7 @@ h2 {
     margin: 0;
 }
 
-.cart-page .cart-summary .cart-btn button {
+/*.cart-page .cart-summary .cart-btn button {
     margin-top: 15px;
     width: calc(50% - 15px);
     height: 50px;
@@ -1647,7 +1803,19 @@ h2 {
     background: #FF6F61;
     border: none;
     border-radius: 4px;
-}
+}*/
+
+    .cart-page .cart-summary .cart-btn button {
+        margin-top: 15px;
+        width: calc(100% - 15px);
+        height: 50px;
+        padding: 2px 10px;
+        text-align: center;
+        color: #ffffff;
+        background: #FF6F61;
+        border: none;
+        border-radius: 4px;
+    }
 
 .cart-page .cart-summary .cart-btn button:hover {
     color: #FF6F61;

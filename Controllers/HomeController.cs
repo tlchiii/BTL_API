@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 using BTL_API_VanPhongPham.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,9 +52,35 @@ namespace BTL_API_VanPhongPham.Controllers
             return View("Products");
         }
 
-        public async Task<IActionResult> MuaNgay()
+        public async Task<IActionResult> MuaNgay(string machitietsp, int sl)
         {
-            return View("CheckOut");
+            List<ChiTietSP> sp = new List<ChiTietSP>();
+            float tong = 0;
+            ViewBag.sl = (sl == null) ? 1 : sl;
+            try
+            {
+                var client = _clientFactory.CreateClient();
+                var response = await client.GetAsync("http://127.0.0.1:5000/sp/chitietsp?machitiet=" + machitietsp);
+                if (response.IsSuccessStatusCode)
+                {
+                    sp = await response.Content.ReadFromJsonAsync<List<ChiTietSP>>();
+
+                    tong = (float)(Convert.ToInt32(sl) * sp[0].DonGiaBan);
+                    ViewBag.tong = tong;
+                }
+
+               
+
+                Console.WriteLine(tong);
+                return View("BuyNow", sp[0]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            
+            return View("BuyNow", sp);
         }
 
 
@@ -82,10 +109,10 @@ namespace BTL_API_VanPhongPham.Controllers
             return View("Cart", carts);
         }
 
-        public async Task<IActionResult> CheckOut()
-        {
-            return View() ;
-        }
+        //public async Task<IActionResult> CheckOut()
+        //{
+        //    return View() ;
+        //}
 
         public IActionResult Privacy()
         {
